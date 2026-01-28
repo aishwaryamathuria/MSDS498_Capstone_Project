@@ -1,0 +1,10 @@
+Patient ID: BLOOD-NP-003
+Age / Sex: 35 / Female
+
+CBC Results:
+
+WBC Count: 8.4 ×10³/µL
+
+Lymphocytes: 41%
+
+CRP: 7 mg/L

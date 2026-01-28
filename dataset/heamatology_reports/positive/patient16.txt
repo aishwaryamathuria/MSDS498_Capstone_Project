@@ -1,0 +1,11 @@
+Patient ID: BLOOD-PN-019
+Age / Sex: 67 / Male
+
+CBC Results:
+
+WBC Count: 19.6 ×10³/µL
+
+Neutrophils: 87%
+
+CRP: 156 mg/L
+Procalcitonin: 6.9 ng/mL

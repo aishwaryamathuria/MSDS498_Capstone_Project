@@ -1,0 +1,8 @@
+Patient ID: BLOOD-NP-016
+Age / Sex: 60 / Male
+
+CBC Results:
+
+WBC Count: 5.2 ×10³/µL
+
+CRP: 6 mg/L

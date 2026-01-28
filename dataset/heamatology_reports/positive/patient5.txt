@@ -1,0 +1,15 @@
+Indicating Pneumonia (Early Infection)
+
+Patient ID: BLOOD-PN-008
+Age / Sex: 47 / Male
+
+CBC Results:
+
+WBC Count: 11.6 ×10³/µL (Mildly elevated)
+
+Neutrophils: 72%
+
+CRP: 52 mg/L
+
+Clinical Interpretation:
+Early inflammatory response consistent with developing pneumonia in appropriate clinical and imaging context.

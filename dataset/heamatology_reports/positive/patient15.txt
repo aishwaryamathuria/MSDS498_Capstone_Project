@@ -1,0 +1,13 @@
+Patient ID: BLOOD-PN-018
+Age / Sex: 48 / Male
+
+CBC Results:
+
+WBC Count: 12.5 ×10³/µL
+
+Neutrophils: 65%
+
+Lymphocytes: 28%
+
+CRP: 74 mg/L
+Procalcitonin: 1.8 ng/mL

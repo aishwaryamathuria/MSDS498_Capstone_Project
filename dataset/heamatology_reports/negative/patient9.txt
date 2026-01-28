@@ -1,0 +1,10 @@
+Patient ID: BLOOD-NP-005
+Age / Sex: 58 / Male
+
+CBC Results:
+
+WBC Count: 11.4 ×10³/µL
+
+Neutrophils: 72%
+
+CRP: 11 mg/L

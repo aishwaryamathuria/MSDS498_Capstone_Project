@@ -1,0 +1,10 @@
+Patient ID: BLOOD-NP-010
+Age / Sex: 50 / Male
+
+CBC Results:
+
+Hemoglobin: 16.9 g/dL (High-normal)
+
+WBC Count: 9.8 ×10³/µL
+
+CRP: 1.5 mg/L

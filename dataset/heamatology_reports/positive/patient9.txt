@@ -1,0 +1,13 @@
+Patient ID: BLOOD-PN-013
+Age / Sex: 70 / Male
+
+CBC Results:
+
+WBC Count: 21.5 ×10³/µL
+
+Neutrophils: 90%
+
+Platelets: 450 ×10³/µL
+
+CRP: 165 mg/L
+Procalcitonin: 8.7 ng/mL

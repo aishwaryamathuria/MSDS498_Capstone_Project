@@ -1,0 +1,10 @@
+Patient ID: BLOOD-PN-007
+Age / Sex: 54 / Female
+
+CBC Results:
+
+WBC Count: 7.2 ×10³/µL
+
+Differential: Normal
+
+CRP: 1.8 mg/L

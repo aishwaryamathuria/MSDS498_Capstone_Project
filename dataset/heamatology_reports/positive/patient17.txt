@@ -1,0 +1,10 @@
+Patient ID: BLOOD-PN-020
+Age / Sex: 56 / Female
+
+CBC Results:
+
+WBC Count: 12.1 ×10³/µL
+
+Neutrophils: 73%
+
+CRP: 61 mg/L

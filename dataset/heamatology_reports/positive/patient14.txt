@@ -1,0 +1,12 @@
+Patient ID: BLOOD-PN-017
+Age / Sex: 61 / Female
+
+CBC Results:
+
+WBC Count: 13.9 ×10³/µL
+
+Neutrophils: 77%
+
+Platelets: 520 ×10³/µL
+
+CRP: 102 mg/L

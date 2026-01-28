@@ -1,0 +1,23 @@
+Patient ID: BLOOD-PN-020
+Age / Sex: 47 / Female
+
+CBC Results:
+
+WBC Count: 14.6 ×10³/µL (High)
+
+Neutrophils: 80% (Neutrophilia)
+
+Bands: Present
+
+Hemoglobin: 11.8 g/dL (Mild anemia)
+
+Platelets: 280 ×10³/µL
+
+Inflammatory Markers:
+
+C-reactive protein (CRP): 90 mg/L (Elevated)
+
+Impression:
+
+Leukocytosis with neutrophilia, bandemia, and elevated CRP, supportive of an acute infectious process such as community-acquired pneumonia.
+

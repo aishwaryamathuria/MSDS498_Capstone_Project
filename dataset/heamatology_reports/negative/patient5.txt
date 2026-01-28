@@ -1,0 +1,16 @@
+Patient ID: BLOOD-NP-001
+Age / Sex: 28 / Female
+
+CBC Results:
+
+WBC Count: 6.3 ×10³/µL
+
+Neutrophils: 55%
+
+Lymphocytes: 35%
+
+Hemoglobin: 13.8 g/dL
+
+Platelets: 245 ×10³/µL
+
+CRP: 1.2 mg/L

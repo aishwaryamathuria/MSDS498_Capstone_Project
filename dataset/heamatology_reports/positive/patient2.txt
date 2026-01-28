@@ -1,0 +1,15 @@
+Patient ID: BLOOD-PN-003
+Age / Sex: 74 / Male
+
+CBC Results:
+
+WBC Count: 18.9 ×10³/µL
+
+Neutrophils: 88%
+
+Lymphocytes: 6% (Low)
+
+Platelets: 420 ×10³/µL (Reactive thrombocytosis)
+
+CRP: 142 mg/L
+Procalcitonin: 6.1 ng/mL

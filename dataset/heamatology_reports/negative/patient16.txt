@@ -1,0 +1,10 @@
+Patient ID: BLOOD-NP-012
+Age / Sex: 37 / Male
+
+CBC Results:
+
+WBC Count: 7.6 ×10³/µL
+
+Lymphocytes: 43%
+
+CRP: 9 mg/L

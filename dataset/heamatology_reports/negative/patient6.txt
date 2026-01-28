@@ -1,0 +1,10 @@
+Patient ID: BLOOD-NP-002
+Age / Sex: 42 / Male
+
+CBC Results:
+
+WBC Count: 10.9 ×10³/µL
+
+Neutrophils: 68%
+
+CRP: 4 mg/L

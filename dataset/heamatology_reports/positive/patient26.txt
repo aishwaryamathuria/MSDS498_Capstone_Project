@@ -1,0 +1,23 @@
+Patient ID: BLOOD-PN-026
+Age / Sex: 73 / Female
+
+CBC Results:
+
+WBC Count: 20.4 ×10³/µL (High)
+
+Neutrophils: 90% (Marked neutrophilia)
+
+Bands: Present
+
+Hemoglobin: 11.6 g/dL (Mild anemia)
+
+Platelets: 350 ×10³/µL
+
+Inflammatory Markers:
+
+C-reactive protein (CRP): 170 mg/L (Elevated)
+
+Impression:
+
+Severe leukocytosis with marked neutrophilia, bandemia, and very high CRP, strongly indicative of severe bacterial pneumonia when integrated with clinical and radiologic data.
+

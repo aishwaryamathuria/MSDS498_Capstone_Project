@@ -1,0 +1,10 @@
+Patient ID: BLOOD-PN-005
+Age / Sex: 36 / Male
+
+CBC Results:
+
+WBC Count: 8.0 ×10³/µL
+
+Differential: Within normal limits
+
+CRP: 6 mg/L (Mild elevation)

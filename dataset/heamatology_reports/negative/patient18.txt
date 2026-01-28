@@ -1,0 +1,10 @@
+Patient ID: BLOOD-NP-014
+Age / Sex: 48 / Female
+
+CBC Results:
+
+WBC Count: 9.2 ×10³/µL
+
+Neutrophils: 63%
+
+CRP: 22 mg/L

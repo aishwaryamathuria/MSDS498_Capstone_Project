@@ -1,0 +1,10 @@
+Patient ID: BLOOD-PN-009
+Age / Sex: 60 / Male
+
+CBC Results:
+
+WBC Count: 3.1 ×10³/µL (Low)
+
+Neutrophils: Reduced
+
+CRP: 4 mg/L

@@ -1,0 +1,10 @@
+Patient ID: BLOOD-PN-014
+Age / Sex: 43 / Male
+
+CBC Results:
+
+WBC Count: 11.3 ×10³/µL
+
+Neutrophils: 70%
+
+CRP: 29 mg/L

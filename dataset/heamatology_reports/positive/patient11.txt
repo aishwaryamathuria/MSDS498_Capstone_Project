@@ -1,0 +1,11 @@
+Patient ID: BLOOD-PN-015
+Age / Sex: 84 / Female
+
+CBC Results:
+
+WBC Count: 8.4 ×10³/µL
+
+Neutrophils: 78%
+
+CRP: 118 mg/L
+Procalcitonin: 4.1 ng/mL

@@ -1,0 +1,12 @@
+Patient ID: BLOOD-PN-004
+Age / Sex: 41 / Female
+
+CBC Results:
+
+WBC Count: 9.4 ×10³/µL
+
+Lymphocytes: 47% (Lymphocytosis)
+
+Neutrophils: 45%
+
+CRP: 38 mg/L (Moderately elevated)

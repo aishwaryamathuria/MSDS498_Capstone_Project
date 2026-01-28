@@ -1,0 +1,12 @@
+Patient ID: BLOOD-NP-015
+Age / Sex: 34 / Female
+
+CBC Results:
+
+Hemoglobin: 10.4 g/dL
+
+MCV: 72 fL
+
+WBC Count: 7.1 ×10³/µL
+
+CRP: 2 mg/L

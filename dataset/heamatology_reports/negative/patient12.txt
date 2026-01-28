@@ -1,0 +1,10 @@
+Patient ID: BLOOD-NP-008
+Age / Sex: 47 / Female
+
+CBC Results:
+
+WBC Count: 3.4 ×10³/µL
+
+Neutrophils: 48%
+
+CRP: 3 mg/L

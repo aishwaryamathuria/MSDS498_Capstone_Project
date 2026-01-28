@@ -1,0 +1,10 @@
+Patient ID: BLOOD-NP-007
+Age / Sex: 33 / Male
+
+CBC Results:
+
+WBC Count: 7.9 ×10³/µL
+
+Eosinophils: 8% (Elevated)
+
+CRP: 2.4 mg/L

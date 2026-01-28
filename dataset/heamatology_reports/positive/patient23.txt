@@ -1,0 +1,23 @@
+Patient ID: BLOOD-PN-023
+Age / Sex: 39 / Male
+
+CBC Results:
+
+WBC Count: 13.9 ×10³/µL (High)
+
+Neutrophils: 79% (Neutrophilia)
+
+Bands: Present
+
+Hemoglobin: 15.0 g/dL
+
+Platelets: 275 ×10³/µL
+
+Inflammatory Markers:
+
+C-reactive protein (CRP): 82 mg/L (Elevated)
+
+Impression:
+
+Moderate leukocytosis with neutrophilia and elevated CRP, consistent with an acute lower respiratory tract infection such as pneumonia in the correct clinical scenario.
+

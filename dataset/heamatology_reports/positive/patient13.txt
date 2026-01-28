@@ -1,0 +1,11 @@
+Patient ID: BLOOD-PN-016
+Age / Sex: 59 / Male
+
+CBC Results:
+
+WBC Count: 3.8 ×10³/µL
+
+Neutrophils: 82%
+
+CRP: 96 mg/L
+Procalcitonin: 3.3 ng/mL
