@@ -15,7 +15,6 @@ def _base():
         _BASE = Path(__file__).resolve().parent.parent
     return _BASE
 
-
 def load_rag_examples(n_positive=5, n_negative=5):
     golden_dir = _base() / "dataset" / "hematology_golden"
     positive_dir = golden_dir / "positive"
@@ -32,7 +31,6 @@ def load_rag_examples(n_positive=5, n_negative=5):
             negative_texts.append(f.read_text(encoding="utf-8", errors="replace").strip())
     return positive_texts, negative_texts
 
-
 def _parse_float_from_text(text, pattern):
     match = re.search(pattern, text, re.IGNORECASE)
     if not match:
@@ -41,7 +39,6 @@ def _parse_float_from_text(text, pattern):
         return float(match.group(1).replace(",", "."))
     except (ValueError, IndexError):
         return None
-
 
 def parse_hematology_report(report_text):
     wbc = _parse_float_from_text(report_text, r"WBC\s+Count:\s*([\d.]+)")
@@ -53,9 +50,7 @@ def parse_hematology_report(report_text):
     neutrophils = _parse_float_from_text(report_text, r"Neutrophils:\s*([\d.]+)\s*%")
     return {"wbc": wbc, "crp": crp, "neutrophils": neutrophils}
 
-
 def _elevated_from_values(values):
-    """Return list of elevated marker names from numeric thresholds (WBC>11, CRP>=50, Neutrophils>75)."""
     wbc, crp, neut = values.get("wbc"), values.get("crp"), values.get("neutrophils")
     elevated = []
     if wbc is not None and wbc > 11.0:
@@ -66,9 +61,8 @@ def _elevated_from_values(values):
         elevated.append("neutrophils")
     return elevated
 
-
+# Rule-based verdict from values
 def _verdict_from_values(values):
-    """Rule-based verdict from values: true if 2+ elevated, false if all normal, else uncertain."""
     elevated = _elevated_from_values(values)
     wbc, crp, neut = values.get("wbc"), values.get("crp"), values.get("neutrophils")
     all_normal = (
@@ -196,9 +190,8 @@ def _resolve_report_path(report_path):
         return candidate
     return path
 
-
+# Turn verdict and values into a short human-readable interpretation.
 def _interpretation_text(verdict, values, elevated):
-    """Turn verdict and values into a short human-readable interpretation."""
     wbc = values.get("wbc")
     crp = values.get("crp")
     neut = values.get("neutrophils")
@@ -238,9 +231,8 @@ def _interpretation_text(verdict, values, elevated):
 
     return "".join(parts)
 
-
+# Run hematology agent and return a human-readable interpretation
 def run(report_path=None, report_text=None):
-    """Run hematology agent and return a human-readable interpretation (pneumonia likely, not, or uncertain and why)."""
     if report_text is None and report_path is None:
         return "Hematology: No report provided."
     if report_text is None:

@@ -1,14 +1,8 @@
 from agents.imaging_agent import run as imaging_agent_run
 from agents.hematology_agent import run as hematology_agent_run
 
-
+# Trigger the right agent based on input and return their interpretation summaries.
 def run_patient_workflow(image_path=None, hematology_report_path=None):
-    """
-    Trigger the right agent(s) based on input and return their interpretation summaries.
-    - If image_path is provided, triggers the imaging agent and gets its summary.
-    - If hematology_report_path is provided, triggers the hematology agent and gets its summary.
-    The orchestrator only routes to agents and returns what they return; it does not interpret.
-    """
     results = []
     if image_path:
         results.append(imaging_agent_run(image_path=image_path))
