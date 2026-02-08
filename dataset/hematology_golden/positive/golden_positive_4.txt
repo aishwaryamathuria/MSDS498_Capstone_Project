@@ -1,0 +1,20 @@
+Patient ID: GOLD-POS-004
+Age / Sex: 63 / Female
+
+CBC Results:
+
+WBC Count: 15.6 ×10³/µL (High)
+
+Neutrophils: 85%
+
+Bands: Present
+
+Hemoglobin: 12.2 g/dL
+
+Platelets: 310 ×10³/µL
+
+Inflammatory Markers:
+
+CRP: 95 mg/L (Elevated)
+
+Compatible with bacterial pneumonia.

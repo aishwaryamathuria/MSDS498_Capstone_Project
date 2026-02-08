@@ -1,0 +1,16 @@
+Patient ID: GOLD-POS-005
+Age / Sex: 52 / Male
+
+CBC Results:
+
+WBC Count: 11.9 ×10³/µL (Mildly elevated)
+
+Neutrophils: 76%
+
+Hemoglobin: 13.5 g/dL
+
+Platelets: 265 ×10³/µL
+
+CRP: 54 mg/L
+
+Early inflammatory response; pneumonia in differential.

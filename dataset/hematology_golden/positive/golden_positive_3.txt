@@ -1,0 +1,16 @@
+Patient ID: GOLD-POS-003
+Age / Sex: 45 / Male
+
+CBC Results:
+
+WBC Count: 12.8 ×10³/µL (Mildly elevated)
+
+Neutrophils: 79%
+
+Hemoglobin: 14.0 g/dL
+
+Platelets: 298 ×10³/µL
+
+C-reactive protein (CRP): 65 mg/L (Elevated)
+
+Findings support community-acquired pneumonia.

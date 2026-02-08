@@ -1,0 +1,18 @@
+Patient ID: GOLD-NEG-002
+Age / Sex: 34 / Male
+
+CBC Results:
+
+WBC Count: 5.9 ×10³/µL
+
+Neutrophils: 58%
+
+Lymphocytes: 32%
+
+Hemoglobin: 14.2 g/dL
+
+Platelets: 255 ×10³/µL
+
+C-reactive protein (CRP): 3 mg/L (Normal)
+
+Labs within normal limits.

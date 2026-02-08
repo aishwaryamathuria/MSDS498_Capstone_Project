@@ -1,0 +1,18 @@
+Patient ID: GOLD-POS-002
+Age / Sex: 71 / Female
+
+CBC Results:
+
+WBC Count: 14.1 ×10³/µL (Elevated)
+
+Neutrophils: 82%
+
+Lymphocytes: 12%
+
+Hemoglobin: 11.9 g/dL
+
+Platelets: 320 ×10³/µL
+
+CRP: 78 mg/L (Elevated)
+
+Interpretation: Inflammatory pattern consistent with pneumonia.

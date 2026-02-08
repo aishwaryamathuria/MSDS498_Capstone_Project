@@ -1,0 +1,18 @@
+Patient ID: GOLD-NEG-003
+Age / Sex: 41 / Female
+
+CBC Results:
+
+WBC Count: 6.8 ×10³/µL
+
+Neutrophils: 52%
+
+Lymphocytes: 38%
+
+Hemoglobin: 13.1 g/dL
+
+Platelets: 242 ×10³/µL
+
+CRP: 4.5 mg/L
+
+Inflammatory markers normal; pneumonia unlikely.
