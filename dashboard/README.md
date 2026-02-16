@@ -13,6 +13,7 @@ cd dashboard/backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+pip install -U transformers accelerate
 python app.py
 ```
 
