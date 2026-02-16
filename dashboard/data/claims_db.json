@@ -68,6 +68,29 @@
           "report_evaluation": "reject"
         }
       ]
+    },
+    {
+      "submission_id": "CLM-20260216180155-ef002bde",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-02-16T18:01:55.960081+00:00",
+      "updated_at": "2026-02-16T18:02:57.483231+00:00",
+      "reports": [
+        {
+          "filename": "chest-x-ray.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216180155-ef002bde/reports/chest-x-ray.png",
+          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
+          "report_evaluation": "accept"
+        },
+        {
+          "filename": "hematology_report.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216180155-ef002bde/reports/hematology_report.txt",
+          "explanation": "Hematology: The hematology results suggest that pneumonia is likely. This is because white blood count is elevated (16.4), CRP is markedly raised (98.0 mg/L), neutrophils are high (84.0%), which together point to a bacterial infection such as pneumonia.",
+          "report_evaluation": "accept"
+        }
+      ]
     }
   ]
 }
