@@ -13,6 +13,8 @@ cd dashboard/backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+pip install transformers accelerate
+pip install torch torchvision sentencepiece
 python app.py
 ```
 

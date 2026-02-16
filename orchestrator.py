@@ -3,7 +3,7 @@ from agents.hematology_agent import analyze as analyze_hematology
 
 
 def _imaging_probability_decision(probability):
-    if probability > 0.9:
+    if probability > 0.95:
         return "accept"
     if probability < 0.7:
         return "reject"
