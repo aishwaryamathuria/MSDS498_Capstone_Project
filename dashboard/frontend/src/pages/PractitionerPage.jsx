@@ -25,6 +25,10 @@ function formatDate(dateString) {
   return parsed.toLocaleString();
 }
 
+function getEvaluationClassName(value) {
+  return `evaluation-${(value || "pending").toLowerCase()}`;
+}
+
 function PractitionerListView() {
   const navigate = useNavigate();
   const [claims, setClaims] = useState([]);
@@ -263,7 +267,17 @@ function PractitionerDetailView({ submissionId }) {
                 />
               )}
               <p className="explanation-text">
-                <strong>Explanation:</strong> {selectedReport.explanation || "Pending"}
+                <strong>AI Evaluation:</strong>{" "}
+                <span
+                  className={`report-evaluation-pill ${getEvaluationClassName(
+                    selectedReport.report_evaluation
+                  )}`}
+                >
+                  {selectedReport.report_evaluation || "Pending"}
+                </span>
+              </p>
+              <p className="explanation-text">
+                <strong>AI Explanation:</strong> {selectedReport.explanation || "Pending"}
               </p>
             </>
           )}
