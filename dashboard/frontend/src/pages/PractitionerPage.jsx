@@ -7,6 +7,13 @@ import {
   updatePractitionerReview
 } from "../api";
 
+const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp", ".tiff"]);
+
+function isImageReport(filename) {
+  const extension = filename?.includes(".") ? `.${filename.split(".").pop().toLowerCase()}` : "";
+  return Boolean(extension) && IMAGE_EXTENSIONS.has(extension);
+}
+
 function formatDate(dateString) {
   if (!dateString) {
     return "-";
@@ -242,11 +249,19 @@ function PractitionerDetailView({ submissionId }) {
               <p className="preview-meta">
                 <strong>File:</strong> {selectedReport.filename}
               </p>
-              <iframe
-                className="report-preview-iframe"
-                src={getReportPreviewUrl(claim.submission_id, selectedReport.filename)}
-                title={selectedReport.filename}
-              />
+              {isImageReport(selectedReport.filename) ? (
+                <img
+                  className="report-preview-image"
+                  src={getReportPreviewUrl(claim.submission_id, selectedReport.filename)}
+                  alt={`Preview of ${selectedReport.filename}`}
+                />
+              ) : (
+                <iframe
+                  className="report-preview-iframe"
+                  src={getReportPreviewUrl(claim.submission_id, selectedReport.filename)}
+                  title={selectedReport.filename}
+                />
+              )}
               <p className="explanation-text">
                 <strong>Explanation:</strong> {selectedReport.explanation || "Pending"}
               </p>

@@ -25,6 +25,11 @@ function getReportType(filename) {
   return IMAGE_EXTENSIONS.has(extension) ? "imaging" : "hematology";
 }
 
+function isImageReport(filename) {
+  const extension = filename?.includes(".") ? `.${filename.split(".").pop().toLowerCase()}` : "";
+  return Boolean(extension) && IMAGE_EXTENSIONS.has(extension);
+}
+
 function getClaimDate(createdAt) {
   if (!createdAt || typeof createdAt !== "string") {
     return "";
@@ -218,7 +223,15 @@ function ClaimsListPage() {
             <p className="preview-meta">
               <strong>File:</strong> {selectedReport.filename}
             </p>
-            <iframe className="report-preview-iframe" src={selectedReport.url} title={selectedReport.filename} />
+            {isImageReport(selectedReport.filename) ? (
+              <img
+                className="report-preview-image"
+                src={selectedReport.url}
+                alt={`Preview of ${selectedReport.filename}`}
+              />
+            ) : (
+              <iframe className="report-preview-iframe" src={selectedReport.url} title={selectedReport.filename} />
+            )}
           </aside>
         )}
       </div>

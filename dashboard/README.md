@@ -25,7 +25,6 @@ npm run dev
 ```
 
 ### User route
-
 - UI: `/submit`
 - API: `POST /api/claims`
 - Accepts multipart form with:
@@ -34,13 +33,11 @@ npm run dev
 - Stores reports and creates/updates JSON DB
 
 ### Claims list route
-
 - UI: `/claims`
 - API: `GET /api/claims`
 - Shows all claims and current status (`accept`, `reject`, `uncertain`, or processing states).
 
 ### Practitioner route
-
 - UI: `/practitioner`
 - API:
   - `GET /api/claims/uncertain`
