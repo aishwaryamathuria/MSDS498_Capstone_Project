@@ -232,16 +232,48 @@ def _interpretation_text(verdict, values, elevated):
     return "".join(parts)
 
 # Run hematology agent and return a human-readable interpretation
-def run(report_path=None, report_text=None):
+def analyze(report_path=None, report_text=None):
     if report_text is None and report_path is None:
-        return "Hematology: No report provided."
+        return {
+            "triggered": False,
+            "decision": "uncertain",
+            "verdict": "uncertain",
+            "explanation": "Hematology: No report provided.",
+        }
+
     if report_text is None:
         path = _resolve_report_path(report_path)
         if not path.exists():
-            return f"Hematology: Report file not found: {report_path}"
+            return {
+                "triggered": False,
+                "decision": "uncertain",
+                "verdict": "uncertain",
+                "explanation": f"Hematology: Report file not found: {report_path}",
+            }
         report_text = path.read_text(encoding="utf-8", errors="replace")
+
     values = parse_hematology_report(report_text)
     verdict, details = check_pneumonia_thresholds(values, report_text=report_text)
     elevated = details.get("elevated", [])
     interpretation = _interpretation_text(verdict, values, elevated)
-    return f"Hematology: {interpretation}"
+
+    # Map hematology verdict into claim decision labels.
+    # true  -> accept (suggests pneumonia)
+    # false -> reject (does not suggest pneumonia)
+    # uncertain -> uncertain
+    decision_map = {"true": "accept", "false": "reject", "uncertain": "uncertain"}
+    decision = decision_map.get(verdict, "uncertain")
+
+    return {
+        "triggered": True,
+        "decision": decision,
+        "verdict": verdict,
+        "values": values,
+        "details": details,
+        "explanation": f"Hematology: {interpretation}",
+    }
+
+
+def run(report_path=None, report_text=None):
+    result = analyze(report_path=report_path, report_text=report_text)
+    return result["explanation"]

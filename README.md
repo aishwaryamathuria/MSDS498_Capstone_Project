@@ -4,9 +4,9 @@ MSDS498_Capstone_Project
 ## Backend:
 ```
     cd dashboard/backend
-    python3 -m venv .venv && source .venv/bin/activate
-    pip install -r requirements.txt
-    python app.py
+    source .venv_mps_test311/bin/activate
+    pip3.11 install -r dashboard/backend/requirements.txt
+    python3.11 dashboard/backend/app.py
 ```
 ## Frontend:
 ```

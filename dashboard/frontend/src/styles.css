@@ -96,6 +96,30 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.claims-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr)) auto;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  align-items: end;
+}
+
+.claims-filter-field {
+  font-size: 0.84rem;
+  color: var(--text);
+}
+
+.claims-filter-field input,
+.claims-filter-field select {
+  width: 100%;
+}
+
+.claims-filter-summary {
+  margin: 0 0 0.65rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
 .practitioner-list-header {
   display: flex;
   align-items: center;
@@ -272,8 +296,62 @@ button:disabled {
 
 .report-block {
   margin-top: 0.75rem;
-  padding-top: 0.75rem;
+  padding-top: 0.25rem;
+}
+
+.report-evaluation-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-soft);
+  padding: 0.7rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.report-evaluation-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.report-evaluation-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.report-evaluation-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.report-evaluation-explanation-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.report-type-chip {
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+  color: #1e3a8a;
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+}
+
+.report-block + .report-block {
   border-top: 1px dashed #dbe4f0;
+  padding-top: 0.75rem;
 }
 
 .report-link-button {
@@ -281,9 +359,10 @@ button:disabled {
   padding: 0;
   background: none;
   color: #1d4ed8;
-  font-weight: 500;
+  /* font-weight: 500; */
   text-decoration: underline;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .report-link-button:hover {
@@ -351,7 +430,8 @@ button:disabled {
 
 .badge.uncertain,
 .badge.submitted,
-.badge.processing {
+.badge.processing,
+.badge.Under {
   background: #64748b;
 }
 
@@ -382,7 +462,45 @@ button:disabled {
   word-break: break-word;
 }
 
+.report-evaluation-pill {
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+}
+
+.report-evaluation-pill.evaluation-accept {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #166534;
+}
+
+.report-evaluation-pill.evaluation-reject {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+}
+
+.report-evaluation-pill.evaluation-uncertain {
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+  color: #92400e;
+}
+
+.report-evaluation-pill.evaluation-pending {
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+}
+
 @media (max-width: 1080px) {
+  .claims-filters {
+    grid-template-columns: 1fr;
+  }
+
   .claims-layout.split {
     flex-direction: column;
   }

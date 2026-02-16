@@ -54,47 +54,22 @@ def generate_submission_id() -> str:
     return f"CLM-{ts}-{suffix}"
 
 
-def infer_report_evaluation(explanation_text: str) -> str:
-    text = (explanation_text or "").lower()
-    reject_keywords = [
-        "reject",
-        "positive",
-        "abnormal",
-        "suspicious",
-        "concerning",
-        "malignan",
-        "high risk",
-    ]
-    accept_keywords = [
-        "accept",
-        "negative",
-        "normal",
-        "benign",
-        "no acute",
-        "low risk",
-    ]
-    if any(keyword in text for keyword in reject_keywords):
-        return "reject"
-    if any(keyword in text for keyword in accept_keywords):
-        return "accept"
-    return "uncertain"
+def run_orchestrator_for_claim(claim: dict) -> dict:
+    image_path = None
+    hematology_path = None
+    for report in claim.get("reports", []):
+        report_path = Path(report["stored_path"])
+        if report_path.suffix.lower() in IMAGE_EXTENSIONS:
+            if image_path is None:
+                image_path = str(report_path)
+        else:
+            if hematology_path is None:
+                hematology_path = str(report_path)
 
-
-def combine_final_evaluation(report_evaluations: list[str]) -> str:
-    if not report_evaluations:
-        return "uncertain"
-    if "reject" in report_evaluations:
-        return "reject"
-    if all(item == "accept" for item in report_evaluations):
-        return "accept"
-    return "uncertain"
-
-
-def run_orchestrator_on_report(report_path: Path) -> str:
-    suffix = report_path.suffix.lower()
-    if suffix in IMAGE_EXTENSIONS:
-        return run_patient_workflow(image_path=str(report_path), hematology_report_path=None)
-    return run_patient_workflow(image_path=None, hematology_report_path=str(report_path))
+    return run_patient_workflow(
+        image_path=image_path,
+        hematology_report_path=hematology_path,
+    )
 
 
 def process_submission(submission_id: str) -> None:
@@ -102,26 +77,35 @@ def process_submission(submission_id: str) -> None:
     claim = next((c for c in db_data["claims"] if c["submission_id"] == submission_id), None)
     if not claim:
         return
-    if claim["status"] != "submitted":
+    if claim["status"] != "Under Review":
         return
 
-    claim["status"] = "processing"
-    claim["updated_at"] = now_iso()
-    save_db(db_data)
+    try:
+        orchestrator_result = run_orchestrator_for_claim(claim)
+    except Exception as exc:  # pragma: no cover - defensive fallback
+        orchestrator_result = {
+            "status": "uncertain",
+            "agent_results": [],
+            "message": f"Orchestrator failed: {exc}",
+        }
 
-    report_evaluations: list[str] = []
+    agent_result_by_name = {
+        item.get("agent"): item for item in orchestrator_result.get("agent_results", [])
+    }
     for report in claim["reports"]:
         report_path = Path(report["stored_path"])
-        try:
-            explanation = run_orchestrator_on_report(report_path)
-        except Exception as exc:  # pragma: no cover - defensive fallback
-            explanation = f"Orchestrator failed for {report['filename']}: {exc}"
-        report_eval = infer_report_evaluation(explanation)
-        report["explanation"] = explanation
-        report["report_evaluation"] = report_eval
-        report_evaluations.append(report_eval)
+        agent_name = "imaging" if report_path.suffix.lower() in IMAGE_EXTENSIONS else "hematology"
+        agent_result = agent_result_by_name.get(agent_name)
+        if agent_result:
+            report["explanation"] = agent_result.get("explanation", "")
+            report["report_evaluation"] = agent_result.get("decision", "uncertain")
+        else:
+            report["explanation"] = (
+                f"No {agent_name} agent result produced for this report in current submission."
+            )
+            report["report_evaluation"] = "uncertain"
 
-    claim["status"] = combine_final_evaluation(report_evaluations)
+    claim["status"] = orchestrator_result.get("status", "uncertain")
     claim["final_evaluation"] = claim["status"]
     claim["updated_at"] = now_iso()
     save_db(db_data)
@@ -134,7 +118,11 @@ class SubmissionListener(threading.Thread):
     def run(self) -> None:
         while True:
             db_data = load_db()
-            pending = [item["submission_id"] for item in db_data["claims"] if item["status"] == "submitted"]
+            pending = [
+                item["submission_id"]
+                for item in db_data["claims"]
+                if item["status"] == "Under Review"
+            ]
             for submission_id in pending:
                 process_submission(submission_id)
             time.sleep(POLL_INTERVAL_SECONDS)
@@ -233,7 +221,7 @@ def submit_claim():
     claim = {
         "submission_id": submission_id,
         "comments": comments,
-        "status": "submitted",
+        "status": "Under Review",
         "final_evaluation": None,
         "practitioner_comment": "",
         "created_at": now_iso(),

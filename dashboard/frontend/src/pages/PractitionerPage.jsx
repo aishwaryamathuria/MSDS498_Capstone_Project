@@ -1,6 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { fetchClaimById, fetchClaims, getReportPreviewUrl, updatePractitionerReview } from "../api";
+import {
+  fetchClaimById,
+  fetchUncertainClaims,
+  getReportPreviewUrl,
+  updatePractitionerReview
+} from "../api";
 
 function formatDate(dateString) {
   if (!dateString) {
@@ -21,7 +26,7 @@ function PractitionerListView() {
   const loadClaims = async () => {
     try {
       setError("");
-      const result = await fetchClaims();
+      const result = await fetchUncertainClaims();
       setClaims(result.claims || []);
     } catch (loadError) {
       setError(loadError.message);
@@ -35,7 +40,7 @@ function PractitionerListView() {
   return (
     <section>
       <div className="page-header">
-        <h2>Practitioner View (All Submitted Claims)</h2>
+        <h2>Practitioner View (Uncertain Claims)</h2>
         <button onClick={loadClaims} type="button">
           Refresh
         </button>
