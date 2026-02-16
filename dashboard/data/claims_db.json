@@ -1,0 +1,27 @@
+{
+  "claims": [
+    {
+      "submission_id": "CLM-20260216060207-a9bd08b9",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "looks good",
+      "created_at": "2026-02-16T06:02:07.785012+00:00",
+      "updated_at": "2026-02-16T06:02:33.611563+00:00",
+      "reports": [
+        {
+          "filename": "0a0f91dc-6015-4342-b809-d19610854a21.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216060207-a9bd08b9/reports/0a0f91dc-6015-4342-b809-d19610854a21.png",
+          "explanation": "Imaging: dummy_analysis_complete. Image: /Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216060207-a9bd08b9/reports/0a0f91dc-6015-4342-b809-d19610854a21.png. No actual analysis performed (dummy).",
+          "report_evaluation": "uncertain"
+        },
+        {
+          "filename": "patient1.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216060207-a9bd08b9/reports/patient1.txt",
+          "explanation": "Hematology: The hematology results suggest that pneumonia is likely. This is because white blood count is elevated (16.4), CRP is markedly raised (98.0 mg/L), neutrophils are high (84.0%), which together point to a bacterial infection such as pneumonia.",
+          "report_evaluation": "uncertain"
+        }
+      ]
+    }
+  ]
+}
