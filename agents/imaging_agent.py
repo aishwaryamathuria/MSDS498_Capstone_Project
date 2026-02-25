@@ -227,8 +227,19 @@ def generate_pneumonia_explanation(image_path, pneumonia_positive, probability):
     status = "positive" if pneumonia_positive else "negative"
     question_text = (
         f"This chest X-ray suggests {status} for pneumonia. "
-        "What is the main radiographic finding in the image that supports this diagnosis?"
+        "If What is the main radiographic finding in the image that supports this diagnosis?"
     )
+    if (status == "positive"):
+        question_text = (
+            f"This chest X-ray suggests {status} for pneumonia. "
+            "If What is the main radiographic finding in the image that supports this diagnosis?"
+        )
+    elif status == "negative":
+        question_text = (
+            f"This chest X-ray suggests {status} for pneumonia. "
+            "If What is the main radiographic finding in the image that rejects the pneumonia diagnosis?"
+        )
+    print(question_text)
     prompt = _build_multimodal_prompt(question_text)
 
     # Keep image and text aligned as a single sample for LLaVA-style processors.

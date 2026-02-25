@@ -1,117 +1,65 @@
 {
   "claims": [
     {
-      "submission_id": "CLM-20260216134556-8003e437",
-      "comments": "Claim submission for pneumonia claim with both reports having positive indications.",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-02-16T13:45:56.206649+00:00",
-      "updated_at": "2026-02-16T13:46:42.950427+00:00",
-      "reports": [
-        {
-          "filename": "chest-x-ray.png",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216134556-8003e437/reports/chest-x-ray.png",
-          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
-          "report_evaluation": "accept"
-        },
-        {
-          "filename": "hematology_report.txt",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216134556-8003e437/reports/hematology_report.txt",
-          "explanation": "Hematology: The hematology results suggest that pneumonia is likely. This is because white blood count is elevated (16.4), CRP is markedly raised (98.0 mg/L), neutrophils are high (84.0%), which together point to a bacterial infection such as pneumonia.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260216134718-e4daddaf",
-      "comments": "Claim submission for pneumonia claim with both reports having negative indications.",
-      "status": "reject",
-      "final_evaluation": "reject",
-      "practitioner_comment": "",
-      "created_at": "2026-02-16T13:47:18.344738+00:00",
-      "updated_at": "2026-02-16T13:47:30.085859+00:00",
-      "reports": [
-        {
-          "filename": "chest-x-ray.png",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216134718-e4daddaf/reports/chest-x-ray.png",
-          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
-          "report_evaluation": "reject"
-        },
-        {
-          "filename": "hematology_report.txt",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216134718-e4daddaf/reports/hematology_report.txt",
-          "explanation": "Hematology: The hematology results do not suggest pneumonia. White blood count, CRP, and neutrophils are within or near normal limits, with no significant inflammatory pattern to support a bacterial lung infection.",
-          "report_evaluation": "reject"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260216134933-c09aa6d2",
-      "comments": "Claim submission for pneumonia claim with both reports having conflicting indications.",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-02-16T13:49:33.922179+00:00",
-      "updated_at": "2026-02-16T19:05:54.084653+00:00",
-      "reports": [
-        {
-          "filename": "chest-x-ray.png",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216134933-c09aa6d2/reports/chest-x-ray.png",
-          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
-          "report_evaluation": "accept"
-        },
-        {
-          "filename": "hematology_report.txt",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216134933-c09aa6d2/reports/hematology_report.txt",
-          "explanation": "Hematology: The hematology results do not suggest pneumonia. White blood count, CRP, and neutrophils are within or near normal limits, with no significant inflammatory pattern to support a bacterial lung infection.",
-          "report_evaluation": "reject"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260216180155-ef002bde",
+      "submission_id": "CLM-20260225145137-3659232d",
       "comments": "",
       "status": "accept",
       "final_evaluation": "accept",
       "practitioner_comment": "",
-      "created_at": "2026-02-16T18:01:55.960081+00:00",
-      "updated_at": "2026-02-16T18:02:57.483231+00:00",
+      "created_at": "2026-02-25T14:51:37.153585+00:00",
+      "updated_at": "2026-02-25T14:53:05.988660+00:00",
       "reports": [
         {
-          "filename": "chest-x-ray.png",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216180155-ef002bde/reports/chest-x-ray.png",
-          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
+          "filename": "patient2.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145137-3659232d/reports/patient2.txt",
+          "explanation": "Hematology: The hematology results suggest that pneumonia is likely. This is because white blood count is elevated (18.9), CRP is markedly raised (142.0 mg/L), neutrophils are high (88.0%), which together point to a bacterial infection such as pneumonia.",
           "report_evaluation": "accept"
         },
         {
-          "filename": "hematology_report.txt",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216180155-ef002bde/reports/hematology_report.txt",
-          "explanation": "Hematology: The hematology results suggest that pneumonia is likely. This is because white blood count is elevated (16.4), CRP is markedly raised (98.0 mg/L), neutrophils are high (84.0%), which together point to a bacterial infection such as pneumonia.",
+          "filename": "xray1.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145137-3659232d/reports/xray1.png",
+          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
           "report_evaluation": "accept"
         }
       ]
     },
     {
-      "submission_id": "CLM-20260216190634-f1507c90",
+      "submission_id": "CLM-20260225145536-13933d41",
       "comments": "",
       "status": "uncertain",
       "final_evaluation": "uncertain",
       "practitioner_comment": "",
-      "created_at": "2026-02-16T19:06:34.248753+00:00",
-      "updated_at": "2026-02-16T19:06:57.044242+00:00",
+      "created_at": "2026-02-25T14:55:36.560597+00:00",
+      "updated_at": "2026-02-25T14:56:12.731849+00:00",
       "reports": [
         {
-          "filename": "chest-x-ray.png",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216190634-f1507c90/reports/chest-x-ray.png",
-          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
-          "report_evaluation": "accept"
-        },
-        {
-          "filename": "hematology_report.txt",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260216190634-f1507c90/reports/hematology_report.txt",
+          "filename": "patient1.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145536-13933d41/reports/patient1.txt",
           "explanation": "Hematology: The hematology results do not suggest pneumonia. White blood count, CRP, and neutrophils are within or near normal limits, with no significant inflammatory pattern to support a bacterial lung infection.",
           "report_evaluation": "reject"
+        },
+        {
+          "filename": "xray1.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145536-13933d41/reports/xray1.png",
+          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260225145842-8275b0a0",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-02-25T14:58:42.674310+00:00",
+      "updated_at": "2026-02-25T14:58:55.784898+00:00",
+      "reports": [
+        {
+          "filename": "003d8fa0-6bf1-40ed-b54c-ac657f8495c5.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145842-8275b0a0/reports/003d8fa0-6bf1-40ed-b54c-ac657f8495c5.png",
+          "explanation": "The main radiographic finding in the image that rejects the pneumonia diagnosis is the absence of any infiltrates or opacities in the lung fields.",
+          "report_evaluation": "accept"
         }
       ]
     }
