@@ -62,6 +62,142 @@
           "report_evaluation": "accept"
         }
       ]
+    },
+    {
+      "submission_id": "CLM-20260302164726-951049bc",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-02T16:47:26.826726+00:00",
+      "updated_at": "2026-03-02T18:13:46.460453+00:00",
+      "reports": [
+        {
+          "filename": "test_image.png",
+          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302164726-951049bc/reports/test_image.png",
+          "explanation": "VLM call skipped for now.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260302170610-105a7c6b",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-02T17:06:10.395447+00:00",
+      "updated_at": "2026-03-02T18:13:46.609919+00:00",
+      "reports": [
+        {
+          "filename": "test_image.png",
+          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302170610-105a7c6b/reports/test_image.png",
+          "explanation": "VLM call skipped for now.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260302181354-233a0269",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-02T18:13:54.163575+00:00",
+      "updated_at": "2026-03-02T18:13:55.091823+00:00",
+      "reports": [
+        {
+          "filename": "test_image.png",
+          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302181354-233a0269/reports/test_image.png",
+          "explanation": "VLM call skipped for now.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260302184438-887595e7",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-02T18:44:38.587522+00:00",
+      "updated_at": "2026-03-02T18:44:45.385448+00:00",
+      "reports": [
+        {
+          "filename": "test_image.png",
+          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302184438-887595e7/reports/test_image.png",
+          "explanation": "VLM call skipped for now.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260302191653-e18d0898",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-02T19:16:53.349494+00:00",
+      "updated_at": "2026-03-02T19:16:59.616868+00:00",
+      "reports": [
+        {
+          "filename": "test_image.png",
+          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302191653-e18d0898/reports/test_image.png",
+          "explanation": "VLM call skipped for now.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260302192551-c736dbf7",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-02T19:25:51.987779+00:00",
+      "updated_at": "2026-03-02T19:26:41.707671+00:00",
+      "reports": [
+        {
+          "filename": "test_image.png",
+          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302192551-c736dbf7/reports/test_image.png",
+          "explanation": "VLM call skipped for now.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260302193209-ca55f66a",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-02T19:32:09.415085+00:00",
+      "updated_at": "2026-03-02T19:32:24.368110+00:00",
+      "reports": [
+        {
+          "filename": "test_image.png",
+          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302193209-ca55f66a/reports/test_image.png",
+          "explanation": "VLM call skipped for now.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260302193438-cfabec54",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-02T19:34:38.349313+00:00",
+      "updated_at": "2026-03-02T19:34:49.131163+00:00",
+      "reports": [
+        {
+          "filename": "test_image.png",
+          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302193438-cfabec54/reports/test_image.png",
+          "explanation": "VLM call skipped for now.",
+          "report_evaluation": "accept"
+        }
+      ]
     }
   ]
 }

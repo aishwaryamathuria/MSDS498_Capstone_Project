@@ -2,13 +2,30 @@ import os
 import logging
 from pathlib import Path
 from PIL import Image
+
 import torch
+import torch.nn as nn
 import transformers
-from transformers import AutoImageProcessor, AutoModelForImageClassification, AutoProcessor
+from torchvision import transforms, models
+from transformers import AutoProcessor
 
 
-CLASSIFIER_MODEL_ID = "lxyuan/vit-xray-pneumonia-classification"
+DENSENET_MODEL_PATH = "model/rsna_densenet121_best_f1.pt"
 EXPLAINER_MODEL_ID = "chaoyinshe/llava-med-v1.5-mistral-7b-hf"
+
+CUT_POINTS = [
+    0.0,
+    0.010970236826688051,
+    0.032142025977373125,
+    0.07188209816813472,
+    0.14953728318214418,
+    0.26543186604976654,
+    0.4187747299671178,
+    0.5828946948051452,
+    0.7357503771781921,
+    0.883841586112976,
+    1.0,
+]
 
 logger = logging.getLogger(__name__)
 if not logger.handlers:
@@ -16,7 +33,6 @@ if not logger.handlers:
 
 _MODELS_READY = False
 _MODEL_INIT_ERROR = None
-_classifier_processor = None
 _classifier_model = None
 _explainer_processor = None
 _explainer_model = None
@@ -57,7 +73,6 @@ def _resolve_device() -> str:
 
 _DEVICE = _resolve_device()
 if _DEVICE == "mps":
-    # Gracefully fall back to CPU for ops not yet implemented on MPS.
     os.environ.setdefault("PYTORCH_ENABLE_MPS_FALLBACK", "1")
 
 
@@ -102,7 +117,6 @@ def _build_multimodal_prompt(user_text):
                 tokenize=False,
             )
         except Exception:
-            # Fall back to explicit image token prompt format.
             pass
 
     return f"<image>\n{user_text}"
@@ -136,11 +150,53 @@ def _load_explainer_model(model_id):
     ) from last_error
 
 
+# -----------------------------
+# DenseNet helpers
+# -----------------------------
+_eval_tfm = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=(0.485, 0.456, 0.406),
+                         std=(0.229, 0.224, 0.225)),
+])
+
+
+def build_densenet121(num_classes: int = 2) -> nn.Module:
+    m = models.densenet121(weights=None)
+    in_features = m.classifier.in_features
+    m.classifier = nn.Linear(in_features, num_classes)
+    return m
+
+
+def assign_decile(probability: float, cut_points) -> int:
+    for i in range(len(cut_points) - 1):
+        left = cut_points[i]
+        right = cut_points[i + 1]
+
+        if i == len(cut_points) - 2:
+            if left <= probability <= right:
+                return i + 1
+        else:
+            if left <= probability < right:
+                return i + 1
+
+    return 10
+
+
+def map_decile_to_band(decile: int) -> str:
+    if decile in [1, 2, 3, 4]:
+        return "NORMAL"
+    elif decile in [5, 6, 7, 8]:
+        return "UNCERTAIN"
+    elif decile in [9, 10]:
+        return "PNEUMONIA"
+    return "UNCERTAIN"
+
+
 def initialize_imaging_models():
-    # Load classifier + VLM models once during script lifecycle
     global _MODELS_READY
     global _MODEL_INIT_ERROR
-    global _classifier_processor, _classifier_model
+    global _classifier_model
     global _explainer_processor, _explainer_model
 
     if _MODELS_READY:
@@ -154,12 +210,13 @@ def initialize_imaging_models():
 
     _log_device_context()
     logger.info("Initializing imaging models on device: %s", _DEVICE)
-    _classifier_processor = _from_pretrained_with_auth(
-        AutoImageProcessor, CLASSIFIER_MODEL_ID
-    )
-    _classifier_model = _from_pretrained_with_auth(
-        AutoModelForImageClassification, CLASSIFIER_MODEL_ID
-    ).to(_DEVICE)
+
+    # Load local DenseNet checkpoint
+    ckpt_path = _ROOT_DIR / DENSENET_MODEL_PATH
+    checkpoint = torch.load(ckpt_path, map_location=_DEVICE)
+
+    _classifier_model = build_densenet121(num_classes=2).to(_DEVICE)
+    _classifier_model.load_state_dict(checkpoint["state_dict"])
     _classifier_model.eval()
 
     _explainer_processor = _from_pretrained_with_auth(AutoProcessor, EXPLAINER_MODEL_ID)
@@ -171,132 +228,105 @@ def initialize_imaging_models():
 
 
 def classify_pneumonia(image_path):
-    # return pneumonia flag and probability
     initialize_imaging_models()
-    logger.info("Running pneumonia classification for image: %s", image_path)
-    image = Image.open(image_path).convert("RGB")
+    logger.info("Running DenseNet pneumonia classification for image: %s", image_path)
 
-    inputs = _classifier_processor(images=image, return_tensors="pt")
-    inputs = {k: v.to(_DEVICE) for k, v in inputs.items()}
+    image = Image.open(image_path).convert("RGB")
+    x = _eval_tfm(image).unsqueeze(0).to(_DEVICE)
 
     with torch.no_grad():
-        logits = _classifier_model(**inputs).logits
+        logits = _classifier_model(x)
         probs = torch.softmax(logits, dim=-1)[0]
-        predicted_idx = int(torch.argmax(probs).item())
-        predicted_label = (
-            _classifier_model.config.id2label.get(predicted_idx, str(predicted_idx))
-            .lower()
-            .strip()
-        )
-        pneumonia_probability = float(probs[predicted_idx].item())
-        pneumonia_positive = "pneumonia" in predicted_label or predicted_label in (
-            "1",
-            "positive",
-            "yes",
-            "true",
-        )
+        pneumonia_probability = float(probs[1].item())   # class 1 = pneumonia
+
+    decile = assign_decile(pneumonia_probability, CUT_POINTS)
+    band_label = map_decile_to_band(decile)
 
     return {
-        "pneumonia_positive": pneumonia_positive,
+        "pneumonia_positive": band_label == "PNEUMONIA",
         "probability": pneumonia_probability,
-        "predicted_label": predicted_label,
+        "predicted_label": band_label,
+        "decile": decile,
+        "band_label": band_label,
     }
 
 
 def _log_classification_result(result):
-    status = "positive" if result["pneumonia_positive"] else "negative"
     logger.info(
-        "Classifier result: status=%s, probability=%.4f, label=%s",
-        status,
+        "Classifier result: band=%s, probability=%.4f, decile=%s",
+        result["band_label"],
         result["probability"],
-        result["predicted_label"],
+        result["decile"],
     )
 
 
 def generate_pneumonia_explanation(image_path, pneumonia_positive, probability):
-    # generate explanation conditioned on positive/negative result
     initialize_imaging_models()
     logger.info(
-        "Generating explanation for image: %s (pneumonia=%s, prob=%.4f)",
+        "Preparing explanation call for image: %s (pneumonia=%s, prob=%.4f)",
         image_path,
         "positive" if pneumonia_positive else "negative",
         probability,
     )
-    image = Image.open(image_path).convert("RGB")
 
+    image = Image.open(image_path).convert("RGB")
     status = "positive" if pneumonia_positive else "negative"
-    question_text = (
-        f"This chest X-ray suggests {status} for pneumonia. "
-        "If What is the main radiographic finding in the image that supports this diagnosis?"
-    )
-    if (status == "positive"):
+
+    if status == "positive":
         question_text = (
             f"This chest X-ray suggests {status} for pneumonia. "
-            "If What is the main radiographic finding in the image that supports this diagnosis?"
+            "What is the main radiographic finding in the image that supports this diagnosis?"
         )
-    elif status == "negative":
+    else:
         question_text = (
             f"This chest X-ray suggests {status} for pneumonia. "
-            "If What is the main radiographic finding in the image that rejects the pneumonia diagnosis?"
+            "What is the main radiographic finding in the image that rejects the pneumonia diagnosis?"
         )
+
     print(question_text)
     prompt = _build_multimodal_prompt(question_text)
 
-    # Keep image and text aligned as a single sample for LLaVA-style processors.
     inputs = _explainer_processor(images=image, text=prompt, return_tensors="pt")
     inputs = {k: v.to(_DEVICE) if hasattr(v, "to") else v for k, v in inputs.items()}
 
-    try:
-        with torch.no_grad():
-            generated_ids = _explainer_model.generate(**inputs, max_new_tokens=220)
-    except ValueError as exc:
-        # Some checkpoints are strict about image-token alignment. Retry with a minimal prompt.
-        if "Image features and image tokens do not match" not in str(exc):
-            raise
-        logger.warning("Image/token mismatch during generation; retrying with fallback prompt.")
-        fallback_prompt = f"<image>\n{question_text}"
-        retry_inputs = _explainer_processor(
-            images=image, text=fallback_prompt, return_tensors="pt"
-        )
-        retry_inputs = {
-            k: v.to(_DEVICE) if hasattr(v, "to") else v
-            for k, v in retry_inputs.items()
-        }
-        with torch.no_grad():
-            generated_ids = _explainer_model.generate(**retry_inputs, max_new_tokens=220)
-        inputs = retry_inputs
+    # TEMPORARILY SKIP VLM INVOCATION
+    print("[INFO] VLM invocation skipped for now. Only CNN output is being checked.")
 
-    # Decode only newly generated tokens to avoid prompt-echo cleanup issues.
-    input_token_count = inputs["input_ids"].shape[-1]
-    generated_only = generated_ids[0][input_token_count:]
-    explanation = _explainer_processor.decode(
-        generated_only, skip_special_tokens=True
-    ).strip()
-    logger.info("Explanation generated successfully.")
+    # with torch.no_grad():
+    #     generated_ids = _explainer_model.generate(**inputs, max_new_tokens=220)
+
+    explanation = "VLM call skipped for now."
+
+    logger.info("Explanation step skipped successfully.")
     return explanation
+
 
 
 def analyze_imaging(image_path):
     """
     Trigger function:
-      1) classify pneumonia
-      2) call explanation model with classification signal
-      3) return probability + explanation
+      1) classify with DenseNet
+      2) compute probability -> decile -> band
+      3) keep VLM plumbing but skip generation for now
     """
     logger.info("Starting imaging analysis pipeline for: %s", image_path)
     classification = classify_pneumonia(image_path)
     _log_classification_result(classification)
+
     explanation = generate_pneumonia_explanation(
         image_path=image_path,
         pneumonia_positive=classification["pneumonia_positive"],
         probability=classification["probability"],
     )
+
     logger.info("Imaging analysis pipeline complete for: %s", image_path)
     return {
         "triggered": True,
         "image_path": image_path,
         "pneumonia_positive": classification["pneumonia_positive"],
         "probability": classification["probability"],
+        "decile": classification["decile"],
+        "band_label": classification["band_label"],
         "explanation": explanation,
     }
 
@@ -308,15 +338,14 @@ def run(image_path=None):
 
     logger.info("run() invoked for imaging path: %s", image_path)
     result = analyze_imaging(image_path=image_path)
-    status = "positive" if result["pneumonia_positive"] else "negative"
+
     return (
-        f"Imaging prediction: {status} "
-        f"(probability={result['probability']:.4f}). "
+        f"Imaging prediction: {result['band_label']} "
+        f"(probability={result['probability']:.4f}, decile={result['decile']}). "
         f"Explanation: {result['explanation']}"
     )
 
 
-# Model load on script initialization.
 try:
     initialize_imaging_models()
 except Exception as exc:
