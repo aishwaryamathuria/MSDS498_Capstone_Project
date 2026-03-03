@@ -1,0 +1,10 @@
+Patient ID: BLOOD-PN-062
+Age / Sex: 28 / Female
+
+CBC Results:
+WBC Count: 14.1 ×10³/µL
+Neutrophils: 80%
+Lymphocytes: 14%
+Hemoglobin: 13.0 g/dL
+Platelets: 290 ×10³/µL
+CRP: 82 mg/L

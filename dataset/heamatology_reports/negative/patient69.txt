@@ -1,0 +1,16 @@
+Patient ID: BLOOD-NG-069
+Age / Sex: 37 / Female
+
+CBC Results:
+
+WBC Count: 5.7 ×10³/µL
+
+Neutrophils: 54%
+
+Lymphocytes: 37%
+
+Hemoglobin: 13.7 g/dL
+
+Platelets: 245 ×10³/µL
+
+CRP: 1.2 mg/L (Normal)

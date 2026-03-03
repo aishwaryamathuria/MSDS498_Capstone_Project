@@ -1,0 +1,16 @@
+Patient ID: BLOOD-NG-070
+Age / Sex: 34 / Male
+
+CBC Results:
+
+WBC Count: 6.2 ×10³/µL
+
+Neutrophils: 57%
+
+Lymphocytes: 35%
+
+Hemoglobin: 14.8 g/dL
+
+Platelets: 262 ×10³/µL
+
+CRP: 1.5 mg/L (Normal)

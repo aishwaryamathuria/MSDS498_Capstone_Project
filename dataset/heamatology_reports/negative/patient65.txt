@@ -1,0 +1,16 @@
+Patient ID: BLOOD-NG-065
+Age / Sex: 52 / Male
+
+CBC Results:
+
+WBC Count: 6.4 ×10³/µL
+
+Neutrophils: 58%
+
+Lymphocytes: 34%
+
+Hemoglobin: 14.6 g/dL
+
+Platelets: 268 ×10³/µL
+
+CRP: 1.8 mg/L (Normal)
