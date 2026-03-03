@@ -1,0 +1,16 @@
+Patient ID: BLOOD-NG-056
+Age / Sex: 30 / Female
+
+CBC Results:
+
+WBC Count: 5.3 ×10³/µL
+
+Neutrophils: 52%
+
+Lymphocytes: 39%
+
+Hemoglobin: 13.0 g/dL
+
+Platelets: 232 ×10³/µL
+
+CRP: 1.2 mg/L (Normal)

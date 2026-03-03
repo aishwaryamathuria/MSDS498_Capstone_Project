@@ -1,0 +1,16 @@
+Patient ID: BLOOD-NG-042
+Age / Sex: 27 / Female
+
+CBC Results:
+
+WBC Count: 5.4 ×10³/µL
+
+Neutrophils: 52%
+
+Lymphocytes: 38%
+
+Hemoglobin: 13.2 g/dL
+
+Platelets: 240 ×10³/µL
+
+CRP: 1.2 mg/L (Normal)

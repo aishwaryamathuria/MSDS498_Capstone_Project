@@ -1,0 +1,16 @@
+Patient ID: BLOOD-PN-032
+Age / Sex: 55 / Male
+
+CBC Results:
+
+WBC Count: 18.6 ×10³/µL
+
+Neutrophils: 91%
+
+Lymphocytes: 6%
+
+Hemoglobin: 15.5 g/dL
+
+Platelets: 360 ×10³/µL
+
+CRP: 170 mg/L

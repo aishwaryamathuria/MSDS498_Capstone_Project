@@ -1,0 +1,16 @@
+Patient ID: BLOOD-PN-056
+Age / Sex: 36 / Female
+
+CBC Results:
+
+WBC Count: 14.8 ×10³/µL
+
+Neutrophils: 81%
+
+Lymphocytes: 13%
+
+Hemoglobin: 13.0 g/dL
+
+Platelets: 293 ×10³/µL
+
+CRP: 84 mg/L

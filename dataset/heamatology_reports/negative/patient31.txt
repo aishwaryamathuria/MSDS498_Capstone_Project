@@ -1,0 +1,16 @@
+Patient ID: BLOOD-PN-031
+Age / Sex: 34 / Female
+
+CBC Results:
+
+WBC Count: 6.3 ×10³/µL
+
+Neutrophils: 58%
+
+Lymphocytes: 32%
+
+Hemoglobin: 13.7 g/dL
+
+Platelets: 252 ×10³/µL
+
+CRP: 2.4 mg/L (Normal)

@@ -1,23 +1,16 @@
 Patient ID: BLOOD-PN-022
-Age / Sex: 71 / Female
+Age / Sex: 48 / Male
 
 CBC Results:
 
-WBC Count: 19.1 ×10³/µL (High)
+WBC Count: 17.8 ×10³/µL
 
-Neutrophils: 89% (Marked neutrophilia)
+Neutrophils: 89%
 
-Bands: Present
+Lymphocytes: 7%
 
-Hemoglobin: 12.4 g/dL
+Hemoglobin: 15.1 g/dL
 
-Platelets: 360 ×10³/µL
+Platelets: 330 ×10³/µL
 
-Inflammatory Markers:
-
-C-reactive protein (CRP): 158 mg/L (Elevated)
-
-Impression:
-
-Marked leukocytosis with pronounced neutrophilia and very high CRP, compatible with severe bacterial pneumonia when considered with clinical status and imaging.
-
+CRP: 140 mg/L

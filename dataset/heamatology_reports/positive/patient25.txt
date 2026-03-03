@@ -1,23 +1,16 @@
 Patient ID: BLOOD-PN-025
-Age / Sex: 45 / Male
+Age / Sex: 34 / Female
 
 CBC Results:
 
-WBC Count: 15.9 ×10³/µL (High)
+WBC Count: 14.8 ×10³/µL
 
-Neutrophils: 81% (Neutrophilia)
+Neutrophils: 82%
 
-Bands: Present
+Lymphocytes: 12%
 
-Hemoglobin: 13.5 g/dL
+Hemoglobin: 13.8 g/dL
 
-Platelets: 305 ×10³/µL
+Platelets: 290 ×10³/µL
 
-Inflammatory Markers:
-
-C-reactive protein (CRP): 102 mg/L (Elevated)
-
-Impression:
-
-Elevated WBC with neutrophilia and significantly raised CRP, findings that are in keeping with acute bacterial pneumonia in the setting of compatible clinical features.
-
+CRP: 95 mg/L

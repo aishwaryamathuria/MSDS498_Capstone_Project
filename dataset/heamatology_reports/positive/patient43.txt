@@ -1,0 +1,16 @@
+Patient ID: BLOOD-PN-043
+Age / Sex: 50 / Male
+
+CBC Results:
+
+WBC Count: 16.4 ×10³/µL
+
+Neutrophils: 86%
+
+Lymphocytes: 9%
+
+Hemoglobin: 13.5 g/dL
+
+Platelets: 322 ×10³/µL
+
+CRP: 105 mg/L

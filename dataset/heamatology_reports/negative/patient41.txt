@@ -1,0 +1,16 @@
+Patient ID: BLOOD-NG-041
+Age / Sex: 40 / Male
+
+CBC Results:
+
+WBC Count: 6.1 ×10³/µL
+
+Neutrophils: 58%
+
+Lymphocytes: 34%
+
+Hemoglobin: 14.5 g/dL
+
+Platelets: 260 ×10³/µL
+
+CRP: 2.0 mg/L (Normal)

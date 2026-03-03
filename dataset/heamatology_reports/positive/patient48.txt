@@ -1,0 +1,16 @@
+Patient ID: BLOOD-PN-048
+Age / Sex: 41 / Female
+
+CBC Results:
+
+WBC Count: 15.1 ×10³/µL
+
+Neutrophils: 83%
+
+Lymphocytes: 11%
+
+Hemoglobin: 13.4 g/dL
+
+Platelets: 305 ×10³/µL
+
+CRP: 90 mg/L

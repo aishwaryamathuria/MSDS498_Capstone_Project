@@ -1,0 +1,16 @@
+Patient ID: BLOOD-PN-025
+Age / Sex: 40 / Male
+
+CBC Results:
+
+WBC Count: 6.7 ×10³/µL
+
+Neutrophils: 59%
+
+Lymphocytes: 31%
+
+Hemoglobin: 15.0 g/dL
+
+Platelets: 255 ×10³/µL
+
+CRP: 5 mg/L (Normal)

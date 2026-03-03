@@ -1,0 +1,16 @@
+Patient ID: BLOOD-PN-051
+Age / Sex: 39 / Male
+
+CBC Results:
+
+WBC Count: 15.9 ×10³/µL
+
+Neutrophils: 84%
+
+Lymphocytes: 10%
+
+Hemoglobin: 14.0 g/dL
+
+Platelets: 312 ×10³/µL
+
+CRP: 97 mg/L

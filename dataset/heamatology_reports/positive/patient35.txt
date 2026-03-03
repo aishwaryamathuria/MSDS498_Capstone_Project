@@ -1,0 +1,16 @@
+Patient ID: BLOOD-PN-035
+Age / Sex: 39 / Female
+
+CBC Results:
+
+WBC Count: 15.0 ×10³/µL
+
+Neutrophils: 83%
+
+Lymphocytes: 11%
+
+Hemoglobin: 13.9 g/dL
+
+Platelets: 300 ×10³/µL
+
+CRP: 100 mg/L

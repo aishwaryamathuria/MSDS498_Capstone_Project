@@ -1,0 +1,16 @@
+Patient ID: BLOOD-PN-049
+Age / Sex: 27 / Male
+
+CBC Results:
+
+WBC Count: 14.4 ×10³/µL
+
+Neutrophils: 80%
+
+Lymphocytes: 14%
+
+Hemoglobin: 14.6 g/dL
+
+Platelets: 298 ×10³/µL
+
+CRP: 78 mg/L
