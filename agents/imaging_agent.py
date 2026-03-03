@@ -7,10 +7,11 @@ import torch
 import torch.nn as nn
 import transformers
 from torchvision import transforms, models
-from transformers import AutoProcessor
+from transformers import AutoImageProcessor, AutoModelForImageClassification, AutoProcessor
 
 
 DENSENET_MODEL_PATH = "model/rsna_densenet121_best_f1.pt"
+CLASSIFIER_MODEL_ID = "lxyuan/vit-xray-pneumonia-classification"
 EXPLAINER_MODEL_ID = "chaoyinshe/llava-med-v1.5-mistral-7b-hf"
 
 CUT_POINTS = [
@@ -34,6 +35,8 @@ if not logger.handlers:
 _MODELS_READY = False
 _MODEL_INIT_ERROR = None
 _classifier_model = None
+_alt_classifier_processor = None
+_alt_classifier_model = None
 _explainer_processor = None
 _explainer_model = None
 _ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -194,9 +197,11 @@ def map_decile_to_band(decile: int) -> str:
 
 
 def initialize_imaging_models():
+    """Load DenseNet (primary classifier), HF ViT (alt classifier), and explainer VLM."""
     global _MODELS_READY
     global _MODEL_INIT_ERROR
     global _classifier_model
+    global _alt_classifier_processor, _alt_classifier_model
     global _explainer_processor, _explainer_model
 
     if _MODELS_READY:
@@ -211,7 +216,7 @@ def initialize_imaging_models():
     _log_device_context()
     logger.info("Initializing imaging models on device: %s", _DEVICE)
 
-    # Load local DenseNet checkpoint
+    # Load local DenseNet checkpoint (primary classifier)
     ckpt_path = _ROOT_DIR / DENSENET_MODEL_PATH
     checkpoint = torch.load(ckpt_path, map_location=_DEVICE)
 
@@ -219,12 +224,55 @@ def initialize_imaging_models():
     _classifier_model.load_state_dict(checkpoint["state_dict"])
     _classifier_model.eval()
 
+    # Load HF ViT alt classifier (used when DenseNet prob < 0.9)
+    _alt_classifier_processor = _from_pretrained_with_auth(
+        AutoImageProcessor, CLASSIFIER_MODEL_ID
+    )
+    _alt_classifier_model = _from_pretrained_with_auth(
+        AutoModelForImageClassification, CLASSIFIER_MODEL_ID
+    ).to(_DEVICE)
+    _alt_classifier_model.eval()
+
+    # Load explainer VLM
     _explainer_processor = _from_pretrained_with_auth(AutoProcessor, EXPLAINER_MODEL_ID)
     _explainer_model = _load_explainer_model(EXPLAINER_MODEL_ID)
     _explainer_model.eval()
 
     _MODELS_READY = True
     logger.info("Imaging models initialized successfully.")
+
+
+def classify_alt_pneumonia(image_path):
+    # return pneumonia flag and probability (HF ViT classifier, used when DenseNet prob < 0.9)
+    initialize_imaging_models()
+    logger.info("Running alt pneumonia classification for image: %s", image_path)
+    image = Image.open(image_path).convert("RGB")
+
+    inputs = _alt_classifier_processor(images=image, return_tensors="pt")
+    inputs = {k: v.to(_DEVICE) for k, v in inputs.items()}
+
+    with torch.no_grad():
+        logits = _alt_classifier_model(**inputs).logits
+        probs = torch.softmax(logits, dim=-1)[0]
+        predicted_idx = int(torch.argmax(probs).item())
+        predicted_label = (
+            _alt_classifier_model.config.id2label.get(predicted_idx, str(predicted_idx))
+            .lower()
+            .strip()
+        )
+        pneumonia_probability = float(probs[predicted_idx].item())
+        pneumonia_positive = "pneumonia" in predicted_label or predicted_label in (
+            "1",
+            "positive",
+            "yes",
+            "true",
+        )
+
+    return {
+        "pneumonia_positive": pneumonia_positive,
+        "probability": pneumonia_probability,
+        "predicted_label": predicted_label,
+    }
 
 
 def classify_pneumonia(image_path):
@@ -239,6 +287,12 @@ def classify_pneumonia(image_path):
         probs = torch.softmax(logits, dim=-1)[0]
         pneumonia_probability = float(probs[1].item())   # class 1 = pneumonia
 
+    logger.info("DenseNet probability: %.4f", pneumonia_probability)
+    if (pneumonia_probability > 0.4 and pneumonia_probability < 0.9):
+        alt_classification = classify_alt_pneumonia(image_path)
+        pneumonia_probability = alt_classification["probability"]
+        pneumonia_positive = alt_classification["pneumonia_positive"]
+        predicted_label = alt_classification["predicted_label"]
     decile = assign_decile(pneumonia_probability, CUT_POINTS)
     band_label = map_decile_to_band(decile)
 
@@ -275,12 +329,12 @@ def generate_pneumonia_explanation(image_path, pneumonia_positive, probability):
     if status == "positive":
         question_text = (
             f"This chest X-ray suggests {status} for pneumonia. "
-            "What is the main radiographic finding in the image that supports this diagnosis?"
+            "What are the main radiographic findings in the image that supports this diagnosis? List all findings from the provided image and indication of where you found them."
         )
     else:
         question_text = (
             f"This chest X-ray suggests {status} for pneumonia. "
-            "What is the main radiographic finding in the image that rejects the pneumonia diagnosis?"
+            "What are the main radiographic findings in the image that rejects the pneumonia diagnosis? List all the missing indications of pneumonia from the provided image."
         )
 
     print(question_text)
@@ -288,16 +342,34 @@ def generate_pneumonia_explanation(image_path, pneumonia_positive, probability):
 
     inputs = _explainer_processor(images=image, text=prompt, return_tensors="pt")
     inputs = {k: v.to(_DEVICE) if hasattr(v, "to") else v for k, v in inputs.items()}
+    generated_ids = None
+    try:
+        with torch.no_grad():
+            generated_ids = _explainer_model.generate(**inputs, max_new_tokens=220)
+    except ValueError as exc:
+        # Some checkpoints are strict about image-token alignment. Retry with a minimal prompt.
+        if "Image features and image tokens do not match" not in str(exc):
+            raise
+        logger.warning("Image/token mismatch during generation; retrying with fallback prompt.")
+        fallback_prompt = f"<image>\n{question_text}"
+        retry_inputs = _explainer_processor(
+            images=image, text=fallback_prompt, return_tensors="pt"
+        )
+        retry_inputs = {
+            k: v.to(_DEVICE) if hasattr(v, "to") else v
+            for k, v in retry_inputs.items()
+        }
+        with torch.no_grad():
+            generated_ids = _explainer_model.generate(**retry_inputs, max_new_tokens=220)
+        inputs = retry_inputs
 
-    # TEMPORARILY SKIP VLM INVOCATION
-    print("[INFO] VLM invocation skipped for now. Only CNN output is being checked.")
-
-    # with torch.no_grad():
-    #     generated_ids = _explainer_model.generate(**inputs, max_new_tokens=220)
-
-    explanation = "VLM call skipped for now."
-
-    logger.info("Explanation step skipped successfully.")
+    # Decode only newly generated tokens to avoid prompt-echo cleanup issues.
+    input_token_count = inputs["input_ids"].shape[-1]
+    generated_only = generated_ids[0][input_token_count:]
+    explanation = _explainer_processor.decode(
+        generated_only, skip_special_tokens=True
+    ).strip()
+    logger.info("Explanation generated successfully.")
     return explanation
 
 

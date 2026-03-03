@@ -122,7 +122,7 @@ def _build_validator_prompt(imaging_result=None, hematology_result=None):
     return f"""
 You are a validator agent for an AI-assisted insurance claim review workflow.
 
-Your job is to combine the structured outputs from:
+Your job is to combine the structured outputs from both or one of the following agents:
 1. an imaging agent
 2. a hematology agent
 
@@ -132,11 +132,13 @@ Allowed final decisions:
 - uncertain
 
 Rules:
-- If both agents support pneumonia-related evidence -> accept
-- If both agents do not support pneumonia-related evidence -> reject
-- If either agent is uncertain -> uncertain
-- If agents disagree -> uncertain
-- If only one agent is present, use that single agent conservatively
+- If both agents are present and support pneumonia-related evidence -> accept
+- If both agents are present and both do not support pneumonia-related evidence -> reject
+- If either agent is present and is uncertain -> uncertain
+- If both agents are present and disagree -> uncertain
+- If only one agent is present and is uncertain -> uncertain
+- If only one agent is present and supports pneumonia-related evidence -> accept
+- If only one agent is present and does not support pneumonia-related evidence -> reject
 
 Return ONLY valid JSON in this exact schema:
 {{

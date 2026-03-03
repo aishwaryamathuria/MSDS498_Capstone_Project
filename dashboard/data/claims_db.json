@@ -1,201 +1,70 @@
 {
   "claims": [
     {
-      "submission_id": "CLM-20260225145137-3659232d",
+      "submission_id": "CLM-20260303192501-706fbe5f",
       "comments": "",
       "status": "accept",
       "final_evaluation": "accept",
       "practitioner_comment": "",
-      "created_at": "2026-02-25T14:51:37.153585+00:00",
-      "updated_at": "2026-02-25T14:53:05.988660+00:00",
+      "created_at": "2026-03-03T19:25:01.527969+00:00",
+      "updated_at": "2026-03-03T19:25:39.930906+00:00",
       "reports": [
         {
-          "filename": "patient2.txt",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145137-3659232d/reports/patient2.txt",
-          "explanation": "Hematology: The hematology results suggest that pneumonia is likely. This is because white blood count is elevated (18.9), CRP is markedly raised (142.0 mg/L), neutrophils are high (88.0%), which together point to a bacterial infection such as pneumonia.",
-          "report_evaluation": "accept"
-        },
-        {
-          "filename": "xray1.png",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145137-3659232d/reports/xray1.png",
-          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
+          "filename": "chest_x_ray_positive_1.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260303192501-706fbe5f/reports/chest_x_ray_positive_1.png",
+          "explanation": "The main radiographic findings in the chest X-ray that support the diagnosis of pneumonia include:\n\n1. Bilateral infiltrates, which are areas of increased density in both lungs.\n2. Consolidation, which is a region of the lung where the air spaces are filled with fluid or other material, making the lung tissue appear more solid.\n3. Pleural effusion, which is the accumulation of fluid in the pleural space, the area between the layers of tissue that line the lungs and the chest cavity.\n\nThese findings are consistent with pneumonia, an infection that causes inflammation in the air sacs of the lungs and can lead to the accumulation of fluid or pus.",
           "report_evaluation": "accept"
         }
       ]
     },
     {
-      "submission_id": "CLM-20260225145536-13933d41",
+      "submission_id": "CLM-20260303192708-c6c655a5",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-03T19:27:08.870492+00:00",
+      "updated_at": "2026-03-03T19:27:34.378293+00:00",
+      "reports": [
+        {
+          "filename": "chest_x_ray_positive_1.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260303192708-c6c655a5/reports/chest_x_ray_positive_1.png",
+          "explanation": "The main radiographic findings in the chest X-ray that support the diagnosis of pneumonia include:\n\n1. Bilateral patchy infiltrates, which are areas of increased density in both lungs. These infiltrates can be seen in the middle and lower lung zones.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260303192749-63618a4a",
+      "comments": "",
+      "status": "reject",
+      "final_evaluation": "reject",
+      "practitioner_comment": "",
+      "created_at": "2026-03-03T19:27:49.959113+00:00",
+      "updated_at": "2026-03-03T19:28:12.296043+00:00",
+      "reports": [
+        {
+          "filename": "chest_x_ray_negative_3.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260303192749-63618a4a/reports/chest_x_ray_negative_3.png",
+          "explanation": "The main radiographic findings in the chest X-ray that reject the pneumonia diagnosis include:\n\n1. Absence of consolidation, which is a common finding in pneumonia.\n2. Absence of pleural effusion, which is the accumulation of fluid in the pleural space surrounding the lungs.\n3. Absence of cavitation, which is the formation of a cavity or hollow space within the lung tissue.\n4. Absence of air bronchograms, which are a pattern of air-filled bronchi surrounded by areas of consolidation.\n\nThese findings are consistent with the negative pneumonia diagnosis.",
+          "report_evaluation": "reject"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260303193055-91f508f9",
       "comments": "",
       "status": "uncertain",
       "final_evaluation": "uncertain",
       "practitioner_comment": "",
-      "created_at": "2026-02-25T14:55:36.560597+00:00",
-      "updated_at": "2026-02-25T14:56:12.731849+00:00",
+      "created_at": "2026-03-03T19:30:55.892250+00:00",
+      "updated_at": "2026-03-03T19:31:49.641808+00:00",
       "reports": [
         {
-          "filename": "patient1.txt",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145536-13933d41/reports/patient1.txt",
-          "explanation": "Hematology: The hematology results do not suggest pneumonia. White blood count, CRP, and neutrophils are within or near normal limits, with no significant inflammatory pattern to support a bacterial lung infection.",
-          "report_evaluation": "reject"
-        },
-        {
-          "filename": "xray1.png",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145536-13933d41/reports/xray1.png",
-          "explanation": "The main radiographic finding in the image that supports the diagnosis of pneumonia is the presence of bilateral infiltrates. These infiltrates are areas of increased density in the lung tissue, which can be indicative of inflammation or infection.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260225145842-8275b0a0",
-      "comments": "",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-02-25T14:58:42.674310+00:00",
-      "updated_at": "2026-02-25T14:58:55.784898+00:00",
-      "reports": [
-        {
-          "filename": "003d8fa0-6bf1-40ed-b54c-ac657f8495c5.png",
-          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260225145842-8275b0a0/reports/003d8fa0-6bf1-40ed-b54c-ac657f8495c5.png",
-          "explanation": "The main radiographic finding in the image that rejects the pneumonia diagnosis is the absence of any infiltrates or opacities in the lung fields.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260302164726-951049bc",
-      "comments": "",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-03-02T16:47:26.826726+00:00",
-      "updated_at": "2026-03-02T18:13:46.460453+00:00",
-      "reports": [
-        {
-          "filename": "test_image.png",
-          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302164726-951049bc/reports/test_image.png",
-          "explanation": "VLM call skipped for now.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260302170610-105a7c6b",
-      "comments": "",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-03-02T17:06:10.395447+00:00",
-      "updated_at": "2026-03-02T18:13:46.609919+00:00",
-      "reports": [
-        {
-          "filename": "test_image.png",
-          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302170610-105a7c6b/reports/test_image.png",
-          "explanation": "VLM call skipped for now.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260302181354-233a0269",
-      "comments": "",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-03-02T18:13:54.163575+00:00",
-      "updated_at": "2026-03-02T18:13:55.091823+00:00",
-      "reports": [
-        {
-          "filename": "test_image.png",
-          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302181354-233a0269/reports/test_image.png",
-          "explanation": "VLM call skipped for now.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260302184438-887595e7",
-      "comments": "",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-03-02T18:44:38.587522+00:00",
-      "updated_at": "2026-03-02T18:44:45.385448+00:00",
-      "reports": [
-        {
-          "filename": "test_image.png",
-          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302184438-887595e7/reports/test_image.png",
-          "explanation": "VLM call skipped for now.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260302191653-e18d0898",
-      "comments": "",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-03-02T19:16:53.349494+00:00",
-      "updated_at": "2026-03-02T19:16:59.616868+00:00",
-      "reports": [
-        {
-          "filename": "test_image.png",
-          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302191653-e18d0898/reports/test_image.png",
-          "explanation": "VLM call skipped for now.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260302192551-c736dbf7",
-      "comments": "",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-03-02T19:25:51.987779+00:00",
-      "updated_at": "2026-03-02T19:26:41.707671+00:00",
-      "reports": [
-        {
-          "filename": "test_image.png",
-          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302192551-c736dbf7/reports/test_image.png",
-          "explanation": "VLM call skipped for now.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260302193209-ca55f66a",
-      "comments": "",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-03-02T19:32:09.415085+00:00",
-      "updated_at": "2026-03-02T19:32:24.368110+00:00",
-      "reports": [
-        {
-          "filename": "test_image.png",
-          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302193209-ca55f66a/reports/test_image.png",
-          "explanation": "VLM call skipped for now.",
-          "report_evaluation": "accept"
-        }
-      ]
-    },
-    {
-      "submission_id": "CLM-20260302193438-cfabec54",
-      "comments": "",
-      "status": "accept",
-      "final_evaluation": "accept",
-      "practitioner_comment": "",
-      "created_at": "2026-03-02T19:34:38.349313+00:00",
-      "updated_at": "2026-03-02T19:34:49.131163+00:00",
-      "reports": [
-        {
-          "filename": "test_image.png",
-          "stored_path": "/Users/tanmayswami/Downloads/Northwestern/Capstone/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260302193438-cfabec54/reports/test_image.png",
-          "explanation": "VLM call skipped for now.",
-          "report_evaluation": "accept"
+          "filename": "chest_x_ray_uncertain_1.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260303193055-91f508f9/reports/chest_x_ray_uncertain_1.png",
+          "explanation": "The main radiographic findings in the image that reject the pneumonia diagnosis include the absence of:\n\n1. Consolidation\n2. Pleural effusion\n3. Pleural thickening\n4. Lung cavities\n5. Lung nodules\n6. Lung masses\n7. Lung abscesses\n\nThese findings are not present in the chest X-ray, which helps to rule out pneumonia as a possible diagnosis.",
+          "report_evaluation": "uncertain"
         }
       ]
     }
