@@ -1,0 +1,12 @@
+Patient ID: BLOOD-NP-004
+Age / Sex: 69 / Female
+
+CBC Results:
+
+Hemoglobin: 9.8 g/dL (Low)
+
+WBC Count: 6.8 ×10³/µL
+
+Platelets: 270 ×10³/µL
+
+CRP: 2.9 mg/L

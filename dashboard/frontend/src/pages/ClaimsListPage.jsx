@@ -37,6 +37,44 @@ function getClaimDate(createdAt) {
   return createdAt.slice(0, 10);
 }
 
+function formatDuration(totalSeconds) {
+  if (!Number.isFinite(totalSeconds) || totalSeconds < 0) {
+    return "";
+  }
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  const parts = [];
+  if (days) {
+    parts.push(`${days}d`);
+  }
+  if (hours || days) {
+    parts.push(`${hours}h`);
+  }
+  if (minutes || hours || days) {
+    parts.push(`${minutes}m`);
+  }
+  parts.push(`${seconds}s`);
+  return parts.join(" ");
+}
+
+function getUnderReviewDurationLabel(claim) {
+  const createdAt = new Date(claim?.created_at);
+  const updatedAt = new Date(claim?.updated_at);
+  if (Number.isNaN(createdAt.getTime()) || Number.isNaN(updatedAt.getTime())) {
+    return "N/A";
+  }
+
+  if ((claim?.status || "").toLowerCase() === "under review") {
+    return "In progress";
+  }
+
+  const durationSeconds = Math.max(0, Math.floor((updatedAt.getTime() - createdAt.getTime()) / 1000));
+  return formatDuration(durationSeconds);
+}
+
 function ClaimsListPage() {
   const [claims, setClaims] = useState([]);
   const [error, setError] = useState("");
@@ -146,11 +184,27 @@ function ClaimsListPage() {
         <div className="claims-list">
           {filteredClaims.map((claim) => {
             const visibleReports = claim.reports || [];
+            const underReviewDurationLabel = getUnderReviewDurationLabel(claim);
             return (
               <article className="card" key={claim.submission_id}>
-                <p>
-                  <strong>Submission ID:</strong> {claim.submission_id}
-                </p>
+                <div className="claim-card-top-row">
+                  <p>
+                    <strong>Submission ID:</strong> {claim.submission_id}
+                  </p>
+                  <div className="claim-duration-meta">
+                    <span
+                      className="report-evaluation-duration-icon"
+                      aria-label="Under review duration"
+                      title="Under review duration"
+                    >
+                      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7v5l3 2" />
+                      </svg>
+                    </span>
+                    <span className="report-evaluation-duration-value">{underReviewDurationLabel}</span>
+                  </div>
+                </div>
                 <p>
                   <strong>Status:</strong> <span className={`badge ${claim.status}`}>{claim.status}</span>
                 </p>

@@ -1,0 +1,11 @@
+Patient ID: BLOOD-PN-006
+Age / Sex: 81 / Female
+
+CBC Results:
+
+WBC Count: 7.8 ×10³/µL (Normal)
+
+Neutrophils: 79% (Relative neutrophilia)
+
+CRP: 112 mg/L
+Procalcitonin: 3.8 ng/mL

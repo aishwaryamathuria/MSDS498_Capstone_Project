@@ -177,6 +177,24 @@ p {
   padding: 10px;
 }
 
+.claim-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.claim-card-top-row p {
+  margin: 0;
+}
+
+.claim-duration-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
 .form-grid {
   display: flex;
   flex-direction: column;
@@ -307,6 +325,33 @@ button:disabled {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
+}
+
+.report-evaluation-duration-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+}
+
+.report-evaluation-duration-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.report-evaluation-duration-value {
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  color: #1e3a8a;
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
 }
 
 .report-evaluation-row {
