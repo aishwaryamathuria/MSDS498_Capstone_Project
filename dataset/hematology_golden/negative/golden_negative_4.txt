@@ -1,18 +1,10 @@
-Patient ID: GOLD-NEG-004
-Age / Sex: 25 / Male
+Patient ID: BLOOD-PN-009
+Age / Sex: 60 / Male
 
 CBC Results:
 
-WBC Count: 7.1 ×10³/µL
+WBC Count: 3.1 ×10³/µL (Low)
 
-Neutrophils: 54%
+Neutrophils: Reduced
 
-Lymphocytes: 36%
-
-Hemoglobin: 14.5 g/dL
-
-Platelets: 260 ×10³/µL
-
-CRP: 2.1 mg/L (Normal)
-
-No acute inflammatory process.
+CRP: 4 mg/L

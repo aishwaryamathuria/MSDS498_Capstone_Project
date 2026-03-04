@@ -15,7 +15,7 @@ def _base():
         _BASE = Path(__file__).resolve().parent.parent
     return _BASE
 
-def load_rag_examples(n_positive=5, n_negative=5):
+def load_rag_examples(n_positive=10, n_negative=10):
     golden_dir = _base() / "dataset" / "hematology_golden"
     positive_dir = golden_dir / "positive"
     negative_dir = golden_dir / "negative"

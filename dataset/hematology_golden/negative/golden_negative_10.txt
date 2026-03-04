@@ -1,0 +1,10 @@
+Patient ID: BLOOD-NP-006
+Age / Sex: 61 / Female
+
+CBC Results:
+
+WBC Count: 7.5 ×10³/µL
+
+Neutrophils: 60%
+
+CRP: 14 mg/L

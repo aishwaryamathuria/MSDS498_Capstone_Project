@@ -1,18 +1,16 @@
-Patient ID: GOLD-NEG-001
-Age / Sex: 28 / Female
+Patient ID: BLOOD-PN-002
+Age / Sex: 29 / Female
 
 CBC Results:
 
-WBC Count: 6.2 ×10³/µL
+WBC Count: 6.1 ×10³/µL
 
-Neutrophils: 55%
+Neutrophils: 56%
 
-Lymphocytes: 35%
+Lymphocytes: 34%
 
-Hemoglobin: 13.8 g/dL
+Hemoglobin: 13.9 g/dL
 
-Platelets: 248 ×10³/µL
+Platelets: 250 ×10³/µL
 
-CRP: 1.8 mg/L (Normal)
-
-No evidence of bacterial infection.
+CRP: 2 mg/L (Normal)

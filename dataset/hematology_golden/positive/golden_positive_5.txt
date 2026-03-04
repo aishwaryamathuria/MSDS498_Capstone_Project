@@ -1,16 +1,15 @@
-Patient ID: GOLD-POS-005
-Age / Sex: 52 / Male
+Indicating Pneumonia (Early Infection)
+
+Patient ID: BLOOD-PN-008
+Age / Sex: 47 / Male
 
 CBC Results:
 
-WBC Count: 11.9 ×10³/µL (Mildly elevated)
+WBC Count: 11.6 ×10³/µL (Mildly elevated)
 
-Neutrophils: 76%
+Neutrophils: 72%
 
-Hemoglobin: 13.5 g/dL
+CRP: 52 mg/L
 
-Platelets: 265 ×10³/µL
-
-CRP: 54 mg/L
-
-Early inflammatory response; pneumonia in differential.
+Clinical Interpretation:
+Early inflammatory response consistent with developing pneumonia in appropriate clinical and imaging context.

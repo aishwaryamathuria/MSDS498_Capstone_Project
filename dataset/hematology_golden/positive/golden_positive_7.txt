@@ -1,0 +1,17 @@
+Patient ID: BLOOD-PN-011
+Age / Sex: 52 / Male
+
+CBC Results:
+
+WBC Count: 14.7 ×10³/µL
+
+Neutrophils: 81%
+
+Bands: Present
+
+Hemoglobin: 14.2 g/dL
+
+Platelets: 295 ×10³/µL
+
+CRP: 86 mg/L
+Procalcitonin: 2.9 ng/mL

@@ -1,0 +1,12 @@
+Patient ID: BLOOD-PN-012
+Age / Sex: 34 / Female
+
+CBC Results:
+
+WBC Count: 10.2 ×10³/µL
+
+Lymphocytes: 49%
+
+Neutrophils: 44%
+
+CRP: 41 mg/L
