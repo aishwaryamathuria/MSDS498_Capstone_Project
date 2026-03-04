@@ -1,0 +1,159 @@
+patientId,label,label_name,image_path,success,error,explanation,explanation_chars,explanation_words
+0c5dc7d1-7022-4e46-bc02-ff9999912edd,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/0c5dc7d1-7022-4e46-bc02-ff9999912edd.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Cardiomegaly: An enlarged heart, which can be a sign of various heart conditions, including pneumonia.
+4. Bilateral hilar lymphadenopathy: Enlarged lymph nodes in the region where the bronchi enter the lungs, which can be a sign of infection or inflammation.
+
+These findings, along with the patient's clinical history and symptoms, led to the diagnosis of pneumonia.",815,130
+e622bc6d-c39f-4c51-b51d-9acee5da80aa,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/e622bc6d-c39f-4c51-b51d-9acee5da80aa.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no significant abnormality in the lung tissue.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no significant fluid buildup in the pleural space.
+
+3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. The absence of cavitary lesions in this image suggests that there are no significant abnormal growths or masses in the lung tissue.
+
+4. No pneum",929,154
+c75b22e9-76d9-4fdd-80cf-d7b88eb6d998,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/c75b22e9-76d9-4fdd-80cf-d7b88eb6d998.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.
+
+3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These can be caused by various factors, including infections like pneumonia. The absence of cavitary lesions in this image suggests that there are no such",937,154
+bf842c92-c6ed-4be4-b188-c05ec8bf8dc2,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/bf842c92-c6ed-4be4-b188-c05ec8bf8dc2.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Cardiomegaly: An enlarged heart, which can be seen as an increased size of the heart silhouette on the X-ray.
+4. Blunting of the costophrenic angles: The angles formed by the diaphragm and the chest wall appear blunted or less sharp than usual, which can be a sign of fluid accumulation or other abnormalities.
+
+These findings, along with the patient's clinical history and symptoms, led to the diagnosis of pneumonia.",867,143
+96f34fa9-0e56-4fdb-bfd7-781d8c453bcb,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/96f34fa9-0e56-4fdb-bfd7-781d8c453bcb.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Cardiomegaly: An enlarged heart, which can be seen as an increased size of the heart silhouette on the X-ray.
+4. Blunting of the costophrenic angles: The angles formed by the diaphragm and the chest wall appear blunted or less sharp than usual, which can be a sign of fluid accumulation or other abnormalities.
+
+These findings, along with the patient's clinical presentation and other diagnostic tests, can help healthcare professionals confirm the diagnosis of pneumonia and",924,149
+5acc56a4-1b6e-4394-9364-9772047d583f,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/5acc56a4-1b6e-4394-9364-9772047d583f.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Consolidation: This is a term used to describe the solidification of lung tissue due to the accumulation of fluid, pus, or other cellular material, often as a result of inflammation or infection.
+4. Air bronchogram: This is a radiographic sign where air-filled bronchi (the tubes that carry air to the lungs) are visible against a background of consolidated lung tissue.
+
+These findings, along with the patient's clinical history and symptoms, led to the diagnosis of pneumonia.",927,150
+83202eb5-7996-4d24-ad8b-6680d9e98bd2,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/83202eb5-7996-4d24-ad8b-6680d9e98bd2.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be seen on a chest X-ray. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.
+
+3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These are not typically seen in pneumonia and are not present in this image.
+
+4. No hilar lymphadenopathy: Hilar l",883,148
+7f9623a6-510f-4e84-8e58-12b65a5e9dfc,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/7f9623a6-510f-4e84-8e58-12b65a5e9dfc.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Cardiomegaly: An enlarged heart, which can be seen as an increased size of the heart silhouette on the X-ray.
+4. Blunting of the costophrenic angles: The angles formed by the diaphragm and the chest wall appear blunted or less sharp than usual, which can be a sign of fluid accumulation or other abnormalities.
+
+These findings, along with the patient's clinical presentation and other diagnostic tests, can help healthcare professionals confirm the diagnosis of pneumonia and",924,149
+3ea080bf-4e81-4037-a686-fcf254a9e1bb,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/3ea080bf-4e81-4037-a686-fcf254a9e1bb.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be seen on a chest X-ray. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.
+
+3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These are not typically seen in pneumonia and are not present in this image.
+
+4. No hilar lymphadenopathy: Hilar l",883,148
+89af4d95-4a0d-4fb3-a4e1-75d470fd3cbd,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/89af4d95-4a0d-4fb3-a4e1-75d470fd3cbd.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.
+
+3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These can be caused by various factors, including infections like pneumonia. The absence of cavitary lesions in this image suggests that there are no such",937,154
+a2cad327-ecaa-4bff-9a4c-7316e784b873,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/a2cad327-ecaa-4bff-9a4c-7316e784b873.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be seen in pneumonia. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which can be a sign of pneumonia or other lung conditions. The absence of pleural effusion in this image indicates that there is no fluid buildup in the pleural space.
+
+3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These can be associated with pneumonia or other lung diseases. The absence of cavitary lesions in this image suggests that there are no such abnormalities present.
+
+4. No hilar lymphadenopathy",896,146
+f92ddac9-aba6-4607-ba72-6ab7e8776fef,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/f92ddac9-aba6-4607-ba72-6ab7e8776fef.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Cardiomegaly: An enlarged heart, which can be seen as an increased size of the heart silhouette on the X-ray.
+4. Blunting of the costophrenic angles: The angles formed by the diaphragm and the chest wall appear blunted or less sharp than usual, which can be a sign of fluid accumulation or other abnormalities.
+
+These findings, along with the patient's clinical history and symptoms, led to the diagnosis of pneumonia.",867,143
+b9201f87-a5ef-49f1-b45f-4c54272bc5d6,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/b9201f87-a5ef-49f1-b45f-4c54272bc5d6.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Cardiomegaly: An enlarged heart, which can be seen as an increased size of the heart silhouette on the X-ray.
+4. Blunting of the costophrenic angles: The angles formed by the diaphragm and the chest wall appear blunted or less sharp than usual, which can be a sign of fluid accumulation or other abnormalities.
+
+These findings, along with the patient's clinical presentation and other diagnostic tests, can help healthcare professionals confirm the diagnosis of pneumonia and",924,149
+c50e1445-58f2-41c5-9774-2d9e24db380b,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/c50e1445-58f2-41c5-9774-2d9e24db380b.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.
+
+3. No lung consolidation: Lung consolidation refers to the solidification of lung tissue, often due to the accumulation of fluid, pus, or other cellular material. This can be a sign of infection or inflammation, such as in pneumonia. The absence of lung consolidation in this image",921,151
+051e6e97-fda7-4b5c-8d5f-084bf3607d22,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/051e6e97-fda7-4b5c-8d5f-084bf3607d22.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Cardiomegaly: An enlarged heart, which can be a sign of various heart conditions, including pneumonia.
+4. Blunting of the costophrenic angles: The costophrenic angles are the sharp angles formed by the diaphragm and the chest wall. Blunting of these angles can be a sign of fluid accumulation, such as pleural effusion.
+
+These findings, along with the patient's clinical presentation and other diagnostic tests, can help healthcare professionals confirm the diagnosis of pneumonia",929,146
+c7935568-7703-4ffe-8b55-b656cc5bb7bc,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/c7935568-7703-4ffe-8b55-b656cc5bb7bc.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.
+
+3. No pneumothorax: Pneumothorax is the presence of air or gas in the pleural space, which can cause the lung to collapse. The absence of pneumothorax in this image suggests that the lung is not collapsed, which is not a characteristic finding in pneumonia.",897,149
+c1f94928-371a-42d0-91ae-f959928694fe,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/c1f94928-371a-42d0-91ae-f959928694fe.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Cardiomegaly: An enlarged heart, which can be seen as an increased size of the heart silhouette on the X-ray.
+4. Blunting of the costophrenic angles: The angles formed by the diaphragm and the chest wall appear blunted or less sharp than usual, which can be a sign of fluid accumulation or other abnormalities.
+
+These findings, along with the patient's clinical presentation and other diagnostic tests, can help healthcare professionals confirm the diagnosis of pneumonia and",924,149
+f8e0ed85-399a-4c57-afc5-a111923d2662,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/f8e0ed85-399a-4c57-afc5-a111923d2662.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.
+
+3. No pneumothorax: Pneumothorax is the presence of air or gas in the pleural space, which can cause the lung to collapse. The absence of pneumothorax in this image suggests that the lung is not collapsed, which is not a characteristic finding in pneumonia.",897,149
+e701619c-8f85-4fd2-af6b-0e751d4c561d,0,negative,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/e701619c-8f85-4fd2-af6b-0e751d4c561d.png,True,,"The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:
+
+1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.
+
+2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.
+
+3. No lung consolidation: Lung consolidation refers to the solidification of lung tissue, often due to the accumulation of fluid, pus, or other cellular material. This can be a sign of infection or inflammation, such as in pneumonia. The absence of lung consolidation in this image",921,151
+ad4d16e5-a851-4327-b9fe-5977da445669,1,positive,/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dataset/archive/Training/Images/ad4d16e5-a851-4327-b9fe-5977da445669.png,True,,"The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:
+
+1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.
+2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.
+3. Cardiomegaly: An enlarged heart, which can be a sign of various heart conditions, including pneumonia.
+4. Bilateral lung consolidation: This refers to the solidification of lung tissue, which can be caused by the accumulation of fluid, pus, or other cellular material within the air spaces of the lungs.
+
+These findings, along with the patient's clinical history and symptoms, led to the diagnosis of pneumonia.",860,138

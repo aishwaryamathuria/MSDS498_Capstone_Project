@@ -5,3 +5,4 @@ __pycache__/
 node_modules
 .venv_mps_test311
 *.ipynb_checkpoints
+*/archive

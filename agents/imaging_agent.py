@@ -325,16 +325,16 @@ def generate_pneumonia_explanation(image_path, pneumonia_positive, probability):
 
     image = Image.open(image_path).convert("RGB")
     status = "positive" if pneumonia_positive else "negative"
-
+    
     if status == "positive":
         question_text = (
             f"This chest X-ray suggests {status} for pneumonia. "
-            "What are the main radiographic findings in the image that supports this diagnosis? List all findings from the provided image and indication of where you found them."
+            "What are all the radiographic findings in this image that supports this diagnosis? "
         )
     else:
         question_text = (
             f"This chest X-ray suggests {status} for pneumonia. "
-            "What are the main radiographic findings in the image that rejects the pneumonia diagnosis? List all the missing indications of pneumonia from the provided image."
+        "What are all the indications in this image that rejects the pneumonia diagnosis? "
         )
 
     print(question_text)
