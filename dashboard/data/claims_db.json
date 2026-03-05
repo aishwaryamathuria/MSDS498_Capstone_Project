@@ -1,4 +1,165 @@
 {
   "claims": [
+    {
+      "submission_id": "CLM-20260305175802-26576124",
+      "comments": "",
+      "status": "uncertain",
+      "final_evaluation": "uncertain",
+      "practitioner_comment": "",
+      "created_at": "2026-03-05T17:58:02.869410+00:00",
+      "updated_at": "2026-03-05T17:59:06.143626+00:00",
+      "reports": [
+        {
+          "filename": "chest_x_ray_patient_7.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305175802-26576124/reports/chest_x_ray_patient_7.png",
+          "explanation": "The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:\n\n1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.\n\n2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.\n\n3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These can be caused by various factors, including infections like pneumonia. The absence of cavitary lesions in this image suggests that there are no such",
+          "report_evaluation": "uncertain"
+        },
+        {
+          "filename": "hematology_report_patient_7.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305175802-26576124/reports/hematology_report_patient_7.txt",
+          "explanation": "Hematology: The hematology results do not suggest pneumonia. White blood count, CRP, and neutrophils are within or near normal limits, with no significant inflammatory pattern to support a bacterial lung infection.",
+          "report_evaluation": "reject"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260305175928-30650ac9",
+      "comments": "",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-05T17:59:28.069151+00:00",
+      "updated_at": "2026-03-05T17:59:48.157332+00:00",
+      "reports": [
+        {
+          "filename": "chest_x_ray_patient_1.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305175928-30650ac9/reports/chest_x_ray_patient_1.png",
+          "explanation": "The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:\n\n1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.\n2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.\n3. Consolidation: This is a term used to describe the solidification of lung tissue due to the accumulation of fluid, pus, or other cellular material, often as a result of inflammation or infection.\n4. Air bronchogram: This is a radiographic sign where air-filled bronchi (the tubes that carry air to the lungs) are visible against a background of consolidated lung tissue.\n\nThese findings, along with the patient's clinical history and symptoms, led to the diagnosis of pneumonia.",
+          "report_evaluation": "accept"
+        },
+        {
+          "filename": "hematology_report_patient_1.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305175928-30650ac9/reports/hematology_report_patient_1.txt",
+          "explanation": "Hematology: The hematology results suggest that pneumonia is likely. This is because white blood count is elevated (16.4), CRP is markedly raised (98.0 mg/L), neutrophils are high (84.0%), which together point to a bacterial infection such as pneumonia.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260305180025-e99a3b4f",
+      "comments": "",
+      "status": "reject",
+      "final_evaluation": "reject",
+      "practitioner_comment": "",
+      "created_at": "2026-03-05T18:00:25.174466+00:00",
+      "updated_at": "2026-03-05T18:00:52.005488+00:00",
+      "reports": [
+        {
+          "filename": "chest_x_ray_patient_4.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305180025-e99a3b4f/reports/chest_x_ray_patient_4.png",
+          "explanation": "The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:\n\n1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be seen on a chest X-ray. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.\n\n2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.\n\n3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These are not typically seen in pneumonia and are not present in this image.\n\n4. No hilar lymphadenopathy: Hilar l",
+          "report_evaluation": "reject"
+        },
+        {
+          "filename": "hematology_report_patient_4.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305180025-e99a3b4f/reports/hematology_report_patient_4.txt",
+          "explanation": "Hematology: The hematology results do not suggest pneumonia. White blood count, CRP, and neutrophils are within or near normal limits, with no significant inflammatory pattern to support a bacterial lung infection.",
+          "report_evaluation": "reject"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260305181023-0eb815d6",
+      "comments": "",
+      "status": "uncertain",
+      "final_evaluation": "uncertain",
+      "practitioner_comment": "",
+      "created_at": "2026-03-05T18:10:23.852951+00:00",
+      "updated_at": "2026-03-05T18:11:02.119534+00:00",
+      "reports": [
+        {
+          "filename": "patient22.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305181023-0eb815d6/reports/patient22.txt",
+          "explanation": "Hematology: The hematology results do not suggest pneumonia. White blood count, CRP, and neutrophils are within or near normal limits, with no significant inflammatory pattern to support a bacterial lung infection.",
+          "report_evaluation": "reject"
+        },
+        {
+          "filename": "chest_x_ray_patient_7.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305181023-0eb815d6/reports/chest_x_ray_patient_7.png",
+          "explanation": "The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:\n\n1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.\n\n2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.\n\n3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These can be caused by various factors, including infections like pneumonia. The absence of cavitary lesions in this image suggests that there are no such",
+          "report_evaluation": "uncertain"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260305184349-d57401e3",
+      "comments": "Submission for a positive pneumonia case",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "",
+      "created_at": "2026-03-05T18:43:49.710326+00:00",
+      "updated_at": "2026-03-05T18:44:25.763697+00:00",
+      "reports": [
+        {
+          "filename": "chest_x_ray_patient_1.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305184349-d57401e3/reports/chest_x_ray_patient_1.png",
+          "explanation": "The chest X-ray shows several radiographic findings that support the diagnosis of pneumonia. These include:\n\n1. Bilateral infiltrates: These are areas of increased density in both lungs, which can be caused by the accumulation of fluid, pus, or other cellular material.\n2. Pleural effusion: This refers to the presence of excess fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity.\n3. Consolidation: This is a term used to describe the solidification of lung tissue due to the accumulation of fluid, pus, or other cellular material, often as a result of inflammation or infection.\n4. Air bronchogram: This is a radiographic sign where air-filled bronchi (the tubes that carry air to the lungs) are visible against a background of consolidated lung tissue.\n\nThese findings, along with the patient's clinical history and symptoms, led to the diagnosis of pneumonia.",
+          "report_evaluation": "accept"
+        },
+        {
+          "filename": "hematology_report_patient_1.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305184349-d57401e3/reports/hematology_report_patient_1.txt",
+          "explanation": "Hematology: The hematology results suggest that pneumonia is likely. This is because white blood count is elevated (16.4), CRP is markedly raised (98.0 mg/L), neutrophils are high (84.0%), which together point to a bacterial infection such as pneumonia.",
+          "report_evaluation": "accept"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260305184506-551e793b",
+      "comments": "Claim submission for a negative case",
+      "status": "reject",
+      "final_evaluation": "reject",
+      "practitioner_comment": "",
+      "created_at": "2026-03-05T18:45:06.094105+00:00",
+      "updated_at": "2026-03-05T18:45:35.632564+00:00",
+      "reports": [
+        {
+          "filename": "chest_x_ray_patient_4.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305184506-551e793b/reports/chest_x_ray_patient_4.png",
+          "explanation": "The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:\n\n1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be seen on a chest X-ray. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.\n\n2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.\n\n3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These are not typically seen in pneumonia and are not present in this image.\n\n4. No hilar lymphadenopathy: Hilar l",
+          "report_evaluation": "reject"
+        },
+        {
+          "filename": "hematology_report_patient_4.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305184506-551e793b/reports/hematology_report_patient_4.txt",
+          "explanation": "Hematology: The hematology results do not suggest pneumonia. White blood count, CRP, and neutrophils are within or near normal limits, with no significant inflammatory pattern to support a bacterial lung infection.",
+          "report_evaluation": "reject"
+        }
+      ]
+    },
+    {
+      "submission_id": "CLM-20260305184612-37fd11bb",
+      "comments": "Contradicting claim",
+      "status": "accept",
+      "final_evaluation": "accept",
+      "practitioner_comment": "There are infiltrates observed",
+      "created_at": "2026-03-05T18:46:12.608629+00:00",
+      "updated_at": "2026-03-05T18:47:30.004449+00:00",
+      "reports": [
+        {
+          "filename": "chest_x_ray_patient_7.png",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305184612-37fd11bb/reports/chest_x_ray_patient_7.png",
+          "explanation": "The chest X-ray shows several indications that reject the pneumonia diagnosis. These include:\n\n1. No infiltrates: Infiltrates are areas of increased density in the lung tissue, which can be a sign of infection or inflammation. The absence of infiltrates in this image suggests that there is no evidence of pneumonia.\n\n2. No pleural effusion: Pleural effusion is the accumulation of fluid in the pleural space, which is the area between the layers of tissue that line the lungs and the chest cavity. The absence of pleural effusion in this image indicates that there is no fluid buildup, which is not a characteristic finding in pneumonia.\n\n3. No cavitary lesions: Cavitary lesions are abnormal masses or growths within the lung tissue that have a cavity or hollow space inside them. These can be caused by various factors, including infections like pneumonia. The absence of cavitary lesions in this image suggests that there are no such",
+          "report_evaluation": "uncertain"
+        },
+        {
+          "filename": "hematology_report_patient_7.txt",
+          "stored_path": "/Users/mathuria/Desktop/gitCode/MSDS498_Capstone_Project/dashboard/data/submissions/CLM-20260305184612-37fd11bb/reports/hematology_report_patient_7.txt",
+          "explanation": "Hematology: The hematology results do not suggest pneumonia. White blood count, CRP, and neutrophils are within or near normal limits, with no significant inflammatory pattern to support a bacterial lung infection.",
+          "report_evaluation": "reject"
+        }
+      ]
+    }
   ]
 }

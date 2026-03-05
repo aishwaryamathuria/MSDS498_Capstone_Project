@@ -1,0 +1,8 @@
+Patient ID: BLOOD-NP-013
+Age / Sex: 55 / Female
+
+CBC Results:
+
+WBC Count: 8.9 ×10³/µL
+
+CRP: 18 mg/L
