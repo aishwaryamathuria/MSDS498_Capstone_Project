@@ -1,5 +1,4 @@
-# MSDS498_Capstone_Project
-## An Agentic AI Framework For Medical Imaging And Report Analysis For Health Insurance Claim Validation
+# An Agentic AI Framework For Medical Imaging And Report Analysis For Health Insurance Claim Validation
 
 The proposed system is designed as an AI-assisted decision-support architecture that helps medical reviewers during the health insurance claim adjudication process. In real-world insurance workflows, adjudication is a complex and high-volume task that significantly affects cost, efficiency, and decision consistency. The architecture therefore focuses on supporting human judgment by pre-screening medical evidence and highlighting cases where the clinical claim may not be well supported by imaging or report data.
 
